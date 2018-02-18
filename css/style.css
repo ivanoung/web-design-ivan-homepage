@@ -1,0 +1,428 @@
+:root {
+    /* --major-font: 'Neuton', serif; */
+    --major-font: 'Open Sans', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --meta-font: 'Source Code Pro', monospace;
+
+    --theme-blue: #0030A8;
+    --theme-yellow: yellow;
+    --font-gray: #4c726a;
+
+    --font-black: #0f0f0f;
+    --font-tinted: rgb(15,15,15);
+    --font-hints: rgb(177,177,177);
+
+    --facebook-blue: #3B5998;
+    --twitter-blue: #1da1f2;
+    --medium-green: #1c9963;
+    --linkedin-blue: #0077B5;
+    --github-black: #24292e;
+    --codepen-black: rgb(17,17,17);
+    --gmail-firebrick: #cc4038;
+
+    
+}
+
+/* html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;} */
+
+document, body, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: var(--major-font);
+    font-size: 50px;
+    line-height: 44px;
+}
+
+h2 {
+    font-family: var(--major-font);
+    font-size: 28px;
+}
+
+h3 {
+    font-family: var(--meta-font);
+    font-size: 15px;
+}
+
+body  {
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.full-page {
+    width: 100%;
+    height: 100vh;
+    padding: 10vmin;
+    box-sizing: border-box;
+
+}
+
+.half-page {
+    width: 100%;
+    height: 50vh;
+    padding: 10vmin;
+    box-sizing: border-box;
+}
+
+.quarter-page {
+    width: 100%;
+    height: 25vh;
+    padding: 10vmin;
+    box-sizing: border-box;
+}
+
+.menu {
+
+    background-color: eee;
+    color: black;
+
+    display: grid;
+
+    justify-content: center;
+    align-content: center;
+
+    text-align: center;
+
+    justify-items: center;
+    align-items: center;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% repeat(3, 1fr) 30%;
+    grid-template-areas: "menu-head"
+                         "menu-links"
+                         "menu-links"
+                         "menu-links"
+                         "social-links";
+    grid-row-gap: 1%;
+}
+
+.exit {
+    position: absolute;
+    top: 4vh;
+    right: 4vw;
+    z-index: 100;
+    fill: var(--font-grey);
+}
+
+#exit-icon {
+    fill: var(--font-grey);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menu-head {
+    grid-area: "menu-head";
+    font-size: 300%;
+    color: var(--font-gray);
+}
+
+.menu-links {
+    grid-area: "menu-links";
+    display: table;
+
+    width: 55%;
+    height: 100%;
+    
+
+    
+    background-color: #f36f6c;
+    transition: all .3s ease-in-out;
+}
+
+.raise {
+    transform: scale(1.1) translateY(-5px);
+}
+
+.menu-links > h1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 550%;
+    
+
+    color: white;
+    transition: all .2s ease;
+}
+
+.menu-links > h1:hover {
+    color: yellow;
+    background-color: var(--theme-blue);
+
+}
+
+
+.social-links {
+    grid-area: "social-links";
+}
+
+
+.social-icons {
+    margin: 1%;
+    width: 2%;
+    height: auto;
+    fill: var(--font-gray);
+    transition: all .2s ease-in-out;
+}
+
+.social-icons:hover {
+    fill: var(--theme-blue);
+}
+
+.clickable {
+    cursor: pointer;
+
+}
+
+
+.intro {
+    display: block;
+}
+
+#logo {
+    position: absolute;
+    top: 5vh;
+    left: 7vw;
+}
+
+#logo > h1 {
+    font-size: 150%;
+}
+
+.description {
+    max-width: 40%;
+    position: absolute;
+    top: 60vh;
+    left: 7vw;
+}
+
+.description > h2::after, .mid > h3#dropLine::after {
+    content : " | ";
+    animation: blinky 1s linear infinite;
+}
+
+@keyframes blinky {
+    0% {opacity:0;}
+    49.9% {opacity:0;}
+    50% {opacity:1;}
+    99.9% {opacity:1;}
+}
+
+.text-insert {
+    color: var(--font-gray);
+}
+
+
+.bloodyhell {
+    position: absolute;
+    top: 6vh;
+    right: 15vw;
+
+    
+    display: grid;
+    grid-column-gap: 2vw;
+    
+    max-width: 40vw;
+    
+
+    
+    grid-template-columns: 30% 30% 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "header linkedin email"
+    ". med phone"
+    ". codepen ."
+    ". github .";
+}
+
+.bloodyhell > :first-child {
+    color: var(--font-gray);
+}
+
+.bloodyhell > * {
+    color: #aaa;
+}
+
+[class*='contact'] {
+    transition: all 1s ease-out;
+}
+
+.contact-title {
+    grid-area: header;
+}
+.contact-email {
+    grid-area: email;
+}
+.contact-phone {
+    grid-area: phone;
+}
+.contact-linkedin {
+    grid-area: linkedin;
+}
+.contact-medium {
+    grid-area: med;
+}
+
+.contact-codepen {
+    grid-area: codepen;
+}
+
+.contact-github {
+    grid-area: github;
+}
+
+
+[class*='contact']:hover {
+    color: white;
+}
+.contact-medium:hover {
+    background-color: var(--medium-green);
+}
+.contact-codepen:hover {
+    background-color: var(--codepen-black);
+}
+.contact-linkedin:hover {
+    background-color: var(--linkedin-blue);
+}
+.contact-github:hover {
+    background-color: var(--github-black);
+}
+
+.experience {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 33.33%);
+    /* grid-gap: 2vmin; */
+    grid-template-areas: 
+    "ipsos . venture venture"
+    "ipsos startup startup cashgun"
+    "store store ysdear cashgun";
+
+}
+
+.exp-box {
+    box-sizing: border-box;
+    border: 2px solid #eee;
+    margin: 1vmin;
+    padding: 3px;
+    background-color: transparent;
+    
+
+}
+
+#ipsos{
+    grid-area: ipsos;
+    background-image: url('/images/ph1.jpeg');
+    background-size: cover;
+}
+#venture{
+    grid-area: venture;
+    background-image: url('/images/ph2.jpeg');
+    background-size: cover;
+}
+#the-store{
+    grid-area: store;
+    background-image: url('/images/ph3.jpeg');
+    background-size: cover;
+}
+#cash-gun{
+    grid-area: cashgun;
+    background-image: url('/images/ph4.jpeg');
+    background-size: cover;
+}
+#yes-dear{
+    grid-area: ysdear;
+    background-image: url('/images/ph5.jpeg');
+    background-size: cover;
+}
+#start-up-weekend{
+    grid-area: startup;
+    background-image: url('/images/ph6.jpeg');
+    background-size: cover;
+}
+
+
+.mid > h3 {
+    color: var(--font-hints);
+}
+
+span.strong {
+    color: var(--font-tinted);
+}
+
+.personal {
+    background-color: #eee;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    
+
+}
+
+.socialmedia {
+    
+
+    display: flex;
+    justify-self: right;
+    align-self: end;
+    /* position: absolute;
+    bottom: 5vmin; */
+
+
+    /* grid-gap: 1vmin; */
+    
+    justify-items: center;
+
+}
+
+.icon-box {
+
+    
+
+    width: 3vmin;
+    height: 3vmin;
+    margin: 0 .5vmin;
+    /* margin: 1vmin; */
+    padding: 1.5vmin;
+    background-color: var(--font-hints);
+    fill: var(--font-tinted);
+
+    transition: all .3s ease-in-out;
+}
+
+.icon-box:hover {
+    fill: #fff;
+}
+
+#facebook:hover {
+    background-color:var(--facebook-blue);
+}
+#twitter:hover {
+    background-color:var(--twitter-blue);
+}
+#email:hover {
+    background-color: var(--gmail-firebrick);
+}
+#medium:hover {
+    background-color: var(--medium-green);
+}
+#linkedin:hover {
+    background-color: var(--linkedin-blue);
+}
+#github:hover {
+    background-color: var(--github-black);
+}
+#codepen:hover {
+    background-color: var(--codepen-black);
+}
