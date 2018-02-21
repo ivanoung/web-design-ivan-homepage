@@ -61,7 +61,7 @@ body  {
 .full-page {
     width: 100%;
     height: 100vh;
-    padding: 10vmin;
+    padding: 5vmin;
     box-sizing: border-box;
 
 }
@@ -69,14 +69,14 @@ body  {
 .half-page {
     width: 100%;
     height: 50vh;
-    padding: 10vmin;
+    padding: 5vmin;
     box-sizing: border-box;
 }
 
 .quarter-page {
     width: 100%;
-    height: 25vh;
-    padding: 10vmin;
+    height: auto;
+    padding: 5vmin;
     box-sizing: border-box;
 }
 
@@ -299,22 +299,31 @@ body  {
 
 .experience {
     background-color: #fff;
+    
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, 33.33%);
+    width: 130vmin;
+    height: 100vmin;
+
+    /* grid-gap: 2px; */
+
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     /* grid-gap: 2vmin; */
     grid-template-areas: 
-    "ipsos . venture venture"
-    "ipsos startup startup cashgun"
-    "store store ysdear cashgun";
+    "ysdear startup creampi storem"
+    "store store cashgun ipsos"
+    "store store goham venture";
 
 }
 
 .exp-box {
     box-sizing: border-box;
-    border: 2px solid #eee;
-    margin: 1vmin;
-    padding: 3px;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid #eee; */
+    /* margin: 1vmin; */
+    /* padding: 3px; */
     background-color: transparent;
     
 
@@ -322,32 +331,47 @@ body  {
 
 #ipsos{
     grid-area: ipsos;
-    background-image: url('/images/ph1.jpeg');
+    background-image: url('/images/ipsos.jpg');
     background-size: cover;
 }
 #venture{
     grid-area: venture;
-    background-image: url('/images/ph2.jpeg');
+    background-image: url('/images/venture-logo.jpg');
     background-size: cover;
 }
-#the-store{
+#the-store-desktop{
     grid-area: store;
-    background-image: url('/images/ph3.jpeg');
+    background-image: url('/images/thestore-desktop.jpg');
     background-size: cover;
 }
 #cash-gun{
     grid-area: cashgun;
-    background-image: url('/images/ph4.jpeg');
+    background-image: url('/images/cash-gun.jpg');
     background-size: cover;
 }
 #yes-dear{
     grid-area: ysdear;
-    background-image: url('/images/ph5.jpeg');
+    background-image: url('/images/ysdear-logo.jpg');
     background-size: cover;
 }
 #start-up-weekend{
     grid-area: startup;
-    background-image: url('/images/ph6.jpeg');
+    background-image: url('/images/startup-weekend.jpg');
+    background-size: cover;
+}
+#creampi{
+    grid-area: creampi;
+    background-image: url('/images/cream-pi.jpg');
+    background-size: cover;
+}
+#the-store-mobile{
+    grid-area: storem;
+    background-image: url('/images/thestore-mobile.jpg');
+    background-size: cover;
+}
+#go-ham{
+    grid-area: goham;
+    background-image: url('/images/tshirt-go-ham.jpg');
     background-size: cover;
 }
 
@@ -365,9 +389,18 @@ span.strong {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    /* padding-bottom: 10vmin; */
     
 
+}
+
+
+
+.under-bottom {
+    z-index: -1;
+    position: fixed;
+    display: block;
+    bottom: 0;
 }
 
 .socialmedia {
@@ -383,7 +416,8 @@ span.strong {
     /* grid-gap: 1vmin; */
     
     justify-items: center;
-
+    /* flex-flow: row; */
+    /* flex-wrap: wrap; */
 }
 
 .icon-box {
