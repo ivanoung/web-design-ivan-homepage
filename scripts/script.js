@@ -83,7 +83,18 @@ var talkingTopic = [
     $(".menu-links, .social-icons").hover(
         function(){$(this).addClass("raise");},
         function(){$(this).removeClass("raise");}
-    )
+    );
+
+    $(".exp-box").hover(
+        function(){
+            $(this).find($('.detail-box')).css("visibility","visible");
+        },
+        function(){
+            $(this).find($('.detail-box')).css("visibility","hidden");
+        }
+        
+    );
+
 });
 
 
