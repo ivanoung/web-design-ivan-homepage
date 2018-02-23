@@ -9,6 +9,8 @@
     --font-black: #0f0f0f;
     --font-tinted: rgb(15, 15, 15);
     --font-hints: rgb(177, 177, 177);
+    --font-header-white: #fcfcfc;
+    --font-detail-body: #cccccc;
     --facebook-blue: #3B5998;
     --twitter-blue: #1da1f2;
     --medium-green: #1c9963;
@@ -16,6 +18,8 @@
     --github-black: #24292e;
     --codepen-black: rgb(17, 17, 17);
     --gmail-firebrick: #cc4038;
+
+    --project-detail-background-color: #333333;
 }
 
 /* html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
@@ -30,7 +34,8 @@ document,
 body,
 h1,
 h2,
-h3 {
+h3,
+h4 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,6 +55,20 @@ h2 {
 h3 {
     font-family: var(--meta-font);
     font-size: 15px;
+}
+
+h4 {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active 
+{
+    color: var(--medium-green);
+    text-decoration-style: wavy;
 }
 
 body {
@@ -79,6 +98,74 @@ body {
     box-sizing: border-box;
 }
 
+
+.project-page {
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+}
+
+.project-images {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.project-details {
+    background-color: var(--project-detail-background-color);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.project-details-text{
+    margin: auto;
+    width: 60%;
+    height: auto;
+    
+}
+
+.txt-wht {
+    color: var(--font-header-white);
+    
+}
+
+.txt-80-shrink {
+    font-size: 150%;
+}
+
+.project-txt-body {
+    font-size: 115%;
+}
+
+.fill-wht {
+    fill: var(--font-hints);
+}
+
+.unl-upCap {
+    font-variant: small-caps;
+    text-decoration: underline #9a9a9a;
+}
+
+.txt-pale {
+    color: #9a9a9a;
+}
+.pad-Bbot {
+    padding: 0 0 1.5vmin 0; 
+}
+
+.pad-top-bot {
+    padding: 3vmin 0 .6vmin 0;
+}
+
+
+
 .menu {
     background-color: eee;
     color: black;
@@ -95,7 +182,7 @@ body {
 }
 
 .exit {
-    position: absolute;
+    position: fixed;
     top: 4vh;
     right: 4vw;
     z-index: 100;
@@ -301,7 +388,7 @@ body {
     grid-template-areas: 
     "startup ysdear creampi storem" 
     "store store cashgun ipsos" 
-    "store store goham venture";
+    "store store goham tdgame";
 }
 
 .exp-box {
@@ -312,6 +399,13 @@ body {
     /* margin: 1vmin; */
     /* padding: 3px; */
     background-color: transparent;
+    transition: all .5s ease-in-out;
+}
+
+.exp-box:hover {
+    
+    z-index: 10;
+    transform: scale(1.1,1.1);
 }
 
 #ipsos {
@@ -320,9 +414,9 @@ body {
     background-size: cover;
 }
 
-#venture {
-    grid-area: venture;
-    background-image: url('/images/venture-logo.jpg');
+#td-gm {
+    grid-area: tdgame;
+    background-image: url('/images/unesco-tencent-logo.png');
     background-size: cover;
 }
 
@@ -454,9 +548,23 @@ span.strong {
     visibility: hidden;
     width: 80%;
     height: 80%;
-    opacity: .8;
+    opacity: .9;
     background-color: white;
     margin: 10%;
     /* align-self: center;
     justify-self: center; */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    
 }
+
+.project-name {
+    color: var(--font-tinted);
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 200%;
+    cursor: pointer;
+    text-decoration: underline var(--font-hints) double;
+}
+
