@@ -1,10 +1,10 @@
-# https://www.ivanoung.io Repository
+# https://www.ivanoung.io - Repository
 > Personal portfolio of Ivan Oung
 
 ## Contents
 
 <details>
-- [Official Documentation](#official-documentation)
+- [v0.1](#v0.1-feb-24-2018)
 </details>
 
 ---
