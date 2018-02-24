@@ -60,6 +60,7 @@ h3 {
 h4 {
     font-family: var(--secondary-font);
     font-weight: 300;
+    color: var(--font-header-white);
 }
 
 a:link,
@@ -386,9 +387,9 @@ body {
     grid-template-rows: repeat(3, 1fr);
     /* grid-gap: 2vmin; */
     grid-template-areas: 
-    "startup ysdear creampi storem" 
-    "store store cashgun ipsos" 
-    "store store goham tdgame";
+    "startup ysdear creampi gmvis" 
+    "store store goham ipsos" 
+    "store store tdgame cashgun";
 }
 
 .exp-box {
@@ -450,9 +451,9 @@ body {
     background-size: cover;
 }
 
-#the-store-mobile {
-    grid-area: storem;
-    background-image: url('/images/thestore-mobile.jpg');
+#game-vision {
+    grid-area: gmvis;
+    background-image: url('/images/dis-ten.jpg');
     background-size: cover;
 }
 

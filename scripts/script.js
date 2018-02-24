@@ -70,8 +70,11 @@ $(document).ready(function(){
     $("#start-up-weekend").click(function(){
         $(".project-page#startup-page, .exit").toggle(300);
     })
-    $("#the-store-desktop, #the-store-mobile").click(function(){
+    $("#the-store-desktop").click(function(){
         $(".project-page#thestore-page, .exit").toggle(300);
+    })
+    $("#game-vision").click(function(){
+        $(".project-page#gmvis-page, .exit").toggle(300);
     })
 
     $(".project-exit").click(function(){
