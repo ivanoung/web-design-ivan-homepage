@@ -1,17 +1,6 @@
 # https://www.ivanoung.io - Repository
 > Personal portfolio of Ivan Oung
 
-## Contents
-
-<details>
-<!--     toc -->
-- [v0.1](#v01-feb-24-2018)
-- [Official Documentation](#official-documentation)
-<!--     tocstop -->
-</details>
-
----
-
 ## v0.1 Feb-24-2018
 ### Added
 - Added projects
