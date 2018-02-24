@@ -4,7 +4,10 @@
 ## Contents
 
 <details>
+<!--     toc -->
 - [v0.1](#v01-feb-24-2018)
+- [Official Documentation](#official-documentation)
+<!--     tocstop -->
 </details>
 
 ---
