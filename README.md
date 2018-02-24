@@ -4,7 +4,7 @@
 ## Contents
 
 <details>
-- [v0.1](#v0.1-feb-24-2018)
+- [v0.1](#v01-feb-24-2018)
 </details>
 
 ---
