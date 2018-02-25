@@ -68,8 +68,8 @@ a:visited,
 a:hover,
 a:active 
 {
-    color: var(--medium-green);
-    text-decoration-style: wavy;
+    color: var(--meta-font);
+    text-decoration: none;
 }
 
 body {
@@ -293,7 +293,11 @@ body {
 }
 
 .text-insert {
-    color: var(--font-gray);
+    color: var(--medium-green);
+}
+
+.txt-int-c {
+    color: var(--medium-green);
 }
 
 .bloodyhell {
@@ -569,3 +573,8 @@ span.strong {
     text-decoration: underline var(--font-hints) double;
 }
 
+
+.linkstyle {
+    text-decoration: wavy;!important
+    text-decoration-color: var(--medium-green);!important
+}
