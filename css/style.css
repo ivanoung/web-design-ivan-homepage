@@ -133,8 +133,7 @@ body {
 }
 
 .txt-wht {
-    color: var(--font-header-white);
-    
+    color: var(--font-header-white);    
 }
 
 .txt-80-shrink {
@@ -575,6 +574,6 @@ span.strong {
 
 
 .linkstyle {
-    text-decoration: wavy;!important
-    text-decoration-color: var(--medium-green);!important
+    text-decoration: wavy;
+    text-decoration-color: var(--medium-green);
 }

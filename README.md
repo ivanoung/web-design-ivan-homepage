@@ -3,7 +3,10 @@
 
 ## v0.2 Feb-25-2018
 ### Added
-    - Google Tag Manage script tag
+    - Google Tag Manage script tag, including GA and Hotjar
+    - All social media links
+    - Added meta tags: description, keywords, and author
+    
 
 ## v0.1 Feb-24-2018
 ### Added
@@ -20,7 +23,6 @@
 ### Pendning Priorities
     - Adding photo album for each projects
     - Scrol down for more
-    - Adding links to all social links
     - Filling in alts
     - Add "worked with"
     - Add "skills"
