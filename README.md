@@ -1,14 +1,22 @@
 # https://www.ivanoung.io - Repository
 > Personal portfolio of Ivan Oung
 
-## v0.2 Feb-25-2018
+## v2.0 March-11-2018
+### Removed
+    - Old design
+
+### Added
+    - New design
+
+
+## v1.1 Feb-25-2018
 ### Added
     - Google Tag Manage script tag, including GA and Hotjar
     - All social media links
     - Added meta tags: description, keywords, and author
     
 
-## v0.1 Feb-24-2018
+## v1.0 Feb-24-2018
 ### Added
 - Added projects
     - (The Store) Web design

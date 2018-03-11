@@ -1,0 +1,27 @@
+:root {
+    --header-font: "Carter One", cursive;
+    --body-font: 'Ubuntu Mono', monospace;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: block;
+}
+
+h1 {
+    font-family: var(--header-font);
+}
+
+p, span, h2, h3, h4 {
+    font-family: var(--body-font);
+}
+
+.outer-continer{
+    margin: auto;
+    max-width: 900px;
+
+}
