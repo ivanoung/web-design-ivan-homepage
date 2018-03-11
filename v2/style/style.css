@@ -3,6 +3,19 @@
     --body-font: 'Ubuntu Mono', monospace;
 }
 
+body{
+    --main-color: #322F7C;
+    --secondary-color: #FF757D;
+    --hightlights: #ff2f7c;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    font-size: 100%;
+}
+
+a{
+    color: var(--secondary-color);
+}
+
 ul{
     margin: 0;
     padding: 0;
@@ -14,14 +27,46 @@ li{
 
 h1 {
     font-family: var(--header-font);
+    font-size: 2.615rem;
 }
 
-p, span, h2, h3, h4 {
+a, p, span, h2, h3, h4 {
+
+    /* Need to adjust to responsive */
+    line-height: 1.2rem;
     font-family: var(--body-font);
+    font-size: 1.1rem;
 }
 
-.outer-continer{
+.outer-container{
     margin: auto;
-    max-width: 900px;
+    padding-top: 10vmin;
+    width: 80vw;
+    max-width: 1200px;
+    /* min-height: 100vh; */
 
+}
+
+.home {
+
+}
+
+.top-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10vmin;
+}
+
+.banner{
+    margin-bottom: 12vmin;
+}
+
+.content{
+    margin-bottom: 14vmin;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
 }
