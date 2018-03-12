@@ -1,182 +1,220 @@
 {
-    "updates": [{
-            "title": "Space travling with p5.js",
-            "link": "https://codepen.io/ivanoung/details/eVpogw/",
-            "date": "dafault",
-            "platform": "Codepen"
-        },
-        {
-            "title": "Front-end Resource Collection",
-            "link": "https://github.com/ivanoung/curated-front-end-resources/",
-            "date": "dafault",
-            "platform": "Github"
-        },
-        {
-            "title": "Drawing Canvas with p5.js",
-            "link": "https://codepen.io/ivanoung/details/LQqvVm/",
-            "date": "dafault",
-            "platform": "Codepen"
-        },
-        {
-            "title": "The Wooden Chest in the Attic",
-            "link": "https://medium.com/the-wooden-chest-in-the-attic/",
-            "date": "dafault",
-            "platform": "Medium"
-        },
-        {
-            "title": "Simon Game - Game your memeory",
-            "link": "https://codepen.io/ivanoung/full/mXbwyp/",
-            "date": "dafault",
-            "platform": "Codepen"
-        }
-    ],
-    "socialmedia": {
-        "facebook": "https://www.facebook.com/ivanoung",
-        "email": "ivanoung@gmail.com",
-        "twitter": "https://twitter.com/IvanTheChaos",
-        "github": "https://github.com/ivanoung",
-        "codepen": "https://codepen.io/ivanoung/",
-        "medium": "https://medium.com/@ivanoung",
-        "linkedin": "https://www.linkedin.com/in/ivanoung/"
+  "updates": [
+    {
+      "title": "Space travling with p5.js",
+      "link": "https://codepen.io/ivanoung/details/eVpogw/",
+      "date": "dafault",
+      "platform": "Codepen"
     },
-    "getShitDone": [{
-            "type": "project/exposure/venture",
-            "name": "default",
-            "description": "default",
-            "objective": "default",
-            "parties": ["default"],
-            "achievement": ["default"],
-            "skills": ["default"],
-            "relatedLinks": [{
-                "caption": "something",
-                "href": "https://www.google.com/"
-            }]
-        },
+    {
+      "title": "Front-end Resource Collection",
+      "link": "https://github.com/ivanoung/curated-front-end-resources/",
+      "date": "dafault",
+      "platform": "Github"
+    },
+    {
+      "title": "Drawing Canvas with p5.js",
+      "link": "https://codepen.io/ivanoung/details/LQqvVm/",
+      "date": "dafault",
+      "platform": "Codepen"
+    },
+    {
+      "title": "The Wooden Chest in the Attic",
+      "link": "https://medium.com/the-wooden-chest-in-the-attic/",
+      "date": "dafault",
+      "platform": "Medium"
+    },
+    {
+      "title": "Simon Game - Game your memeory",
+      "link": "https://codepen.io/ivanoung/full/mXbwyp/",
+      "date": "dafault",
+      "platform": "Codepen"
+    }
+  ],
+  "socialmedia": {
+    "facebook": "https://www.facebook.com/ivanoung",
+    "email": "ivanoung@gmail.com",
+    "twitter": "https://twitter.com/IvanTheChaos",
+    "github": "https://github.com/ivanoung",
+    "codepen": "https://codepen.io/ivanoung/",
+    "medium": "https://medium.com/@ivanoung",
+    "linkedin": "https://www.linkedin.com/in/ivanoung/"
+  },
+  "getShitDone": [
+    {
+      "type": "project",
+      "name": "The Store HK",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/thestore-mb-wb.jpg",
+      "description":
+        "Word from the experienced: working in a healthy company does not make you become healthier.",
+      "objective":
+        "Plan and execute digital marketing strategy, perform small-scale front-end development, regulate and standardise business operations.",
+      "parties": ["The Store HK"],
+      "achievement": [],
+      "skills": [
+        "Project Management",
+        "Front-End Development",
+        "Digital Marketing"
+      ],
+      "relatedLinks": [
         {
-            "type": "project",
-            "name": "The Store HK",
-            "description": "Word from the experienced: working in a healthy company does not make you become healthier.",
-            "objective": "Plan and execute digital marketing strategy, perform small-scale front-end development, regulate and standardise business operations.",
-            "parties": ["The Store HK"],
-            "achievement": [],
-            "skills": ["Project Management", "Front-End Development", "Digital Marketing"],
-            "relatedLinks": [{
-                "caption": "The Store HK",
-                "href": "https://www.thestore.hk/"
-            }]
-        },
-        {
-            "type": "project",
-            "name": "Ipsos",
-            "description": "Those who dive into the sea of consumers without studying them is like swimming in a sea of sharks covered in blood - doomed.",
-            "objective": "Help translate and localize international marketing surveys to its respective local dialect and customs. Specializes in English-Chinese translation projects.",
-            "parties": ["Ipsos Canada"],
-            "achievement": [],
-            "skills": ["Translation"],
-            "relatedLinks": [{
-                "caption": "Ipsos Canada",
-                "href": "https://www.ipsos.com/en-ca"
-            }]
-        },
-        {
-            "type": "project",
-            "name": "Open Digital Library of Traditional Games",
-            "description": "Open Digital Library of Traditional Game is a global project supported by UNESCO and Tencent, aims to safeguard invaluable knowledge such as living heritage in the public domain, narrow the digital divide, and promote mutual understanding among peoples of different cultures.",
-            "objective": "Plan and execute digital marketing strategy, create content, conducting interviews, outreach to professionals with similar field of interest.",
-            "parties": ["UNESCO", "Tencent", "Erasmus+ UK"],
-            "achievement": [],
-            "skills": ["default"],
-            "relatedLinks": [{
-                    "caption": "UNESCO",
-                    "href": "https://en.unesco.org/"
-                },
-                {
-                    "caption": "Tencent",
-                    "href": "https://www.tencent.com/en-us/index.html"
-                },
-                {
-                    "caption": "Erasmus+ UK",
-                    "href": "https://www.erasmusplus.org.uk/"
-                }
-            ]
-        },
-        {
-            "type": "project",
-            "name": "Co-producer invitation",
-            "description": "Future prediction based on the extension of the Open Digital Library of Traditional Game, interviewing some of the most influential traditional game players about their vision on Traditional games and gaming in future 10 years.",
-            "objective": "Plan and execute digital marketing strategy, create content, conducting interviews, outreach to professionals with similar field of interest.",
-            "parties": ["Discovery Channel", "Tencent Entertainment"],
-            "achievement": [],
-            "skills": ["Project Management", "Outreach", "Interview", "Marketing Research", "Social Media Management"],
-            "relatedLinks": []
-        },
-        {
-            "type": "exposure",
-            "name": "Startup Weekends - Alpha",
-            "description": "Business owners are not the only one whom should equipped with a well understanding of the essential pillars of a successful business. There is no better way of doing good business better than understand how to build one. Get your hands dirty, build well, profit.",
-            "objective": "Within a 54-hour tight deadline, strangers join together to pitch new startup ideas. Work from Friday night to develop a working prototype, demo and to deliver a presentation by Sunday evening.",
-            "parties": ["Startup Weekend, Cocoon"],
-            "achievement": ["Validation Award"],
-            "skills": ["Public Speaking", "Sprint/Scrum"],
-            "relatedLinks": [{
-                    "caption": "Startup Weekend Alpha",
-                    "href": "https://www.facebook.com/StartupWeekendHK/photos/?ref=page_internal"
-                },
-                {
-                    "caption": "Cocoon",
-                    "href": "https://www.hkcocoon.com/"
-                }
-            ]
-        },
-        {
-            "type": "exposure",
-            "name": "S.T.G.S.S. Career Development Day",
-            "description": "Having knowledge without the opportunity to apply is a waste of resource, not to mention when you are not giving back to the community where you’ve been brought up from.",
-            "objective": "To share my startup failures with the graduating seniors to-be, and what are the do’s and don'ts.",
-            "parties": ["S.T.G.S.S."],
-            "achievement": [],
-            "skills": ["Public Speaking"],
-            "relatedLinks": []
-        },
-        {
-            "type": "venture",
-            "name": "Ys, Dear",
-            "description": "If you were ever a wise living person who aims to live long and prosper, 'Yes dear' is the only thing you need to know about while talking to your 'honey'.",
-            "objective": "Import fresh farm honey directly from Winnipeg, Manitoba to Hong Kong",
-            "parties": ["Da bees"],
-            "achievement": [],
-            "skills": ["Importing", "Marketing", "Business Development"],
-            "relatedLinks": [{
-                "caption": "Ys, Dear",
-                "href": "https://www.ysdear.com/"
-            }]
-        },
-        {
-            "type": "venture",
-            "name": "Punny T-shirt Design",
-            "description": "I prefer strangers staring right at my t-shirt rather than at my obvious flaws or into my sad, hollow soul.",
-            "objective": "Solo design challenge to create funny and 'dank' t-shirt with 8-bit retro gaming style.",
-            "parties": [],
-            "achievement": [],
-            "skills": ["Adobe Photoshop", "Adobe Illustrator"],
-            "relatedLinks": [{
-                "caption": "Redbubble Shop",
-                "href": "https://www.redbubble.com/people/IVANOUNG/shop"
-            }]
-        },
-        {
-            "type": "venture",
-            "name": "Cash Gun",
-            "description": "There is no good reason to earn more money when you can't really show them off like you really own them. Roll'em hard like nothing but the true spirit of capitalism.",
-            "objective": "Remodeling of the toy 'cash gun' with Soildwork and AutoCAD",
-            "parties": ["Youtube Tutorials", "Coefvfvs"],
-            "achievement": ["Massive hair loss"],
-            "skills": ["3D Modeling", "3D Printing", "AutoCAD", "Solidwork"],
-            "relatedLinks": [{
-                "caption": "something",
-                "href": "https://www.google.com/"
-            }]
+          "caption": "The Store HK",
+          "href": "https://www.thestore.hk/"
         }
-    ]
-
+      ]
+    },
+    {
+      "type": "project",
+      "name": "Ipsos",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/ipsos.jpg",
+      "description":
+        "Those who dive into the sea of consumers without studying them is like swimming in a sea of sharks covered in blood - doomed.",
+      "objective":
+        "Help translate and localize international marketing surveys to its respective local dialect and customs. Specializes in English-Chinese translation projects.",
+      "parties": ["Ipsos Canada"],
+      "achievement": [],
+      "skills": ["Translation"],
+      "relatedLinks": [
+        {
+          "caption": "Ipsos Canada",
+          "href": "https://www.ipsos.com/en-ca"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "name": "Open Digital Library of Traditional Games",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/unesco-tencent-logo.jpeg",
+      "description":
+        "Open Digital Library of Traditional Game is a global project supported by UNESCO and Tencent, aims to safeguard invaluable knowledge such as living heritage in the public domain, narrow the digital divide, and promote mutual understanding among peoples of different cultures.",
+      "objective":
+        "Plan and execute digital marketing strategy, create content, conducting interviews, outreach to professionals with similar field of interest.",
+      "parties": ["UNESCO", "Tencent", "Erasmus+ UK"],
+      "achievement": [],
+      "skills": ["default"],
+      "relatedLinks": [
+        {
+          "caption": "UNESCO",
+          "href": "https://en.unesco.org/"
+        },
+        {
+          "caption": "Tencent",
+          "href": "https://www.tencent.com/en-us/index.html"
+        },
+        {
+          "caption": "Erasmus+ UK",
+          "href": "https://www.erasmusplus.org.uk/"
+        }
+      ]
+    },
+    {
+      "type": "project",
+      "name": "Co-producer invitation",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/dis-ten.jpg",
+      "description":
+        "Future prediction based on the extension of the Open Digital Library of Traditional Game, interviewing some of the most influential traditional game players about their vision on Traditional games and gaming in future 10 years.",
+      "objective":
+        "Plan and execute digital marketing strategy, create content, conducting interviews, outreach to professionals with similar field of interest.",
+      "parties": ["Discovery Channel", "Tencent Entertainment"],
+      "achievement": [],
+      "skills": [
+        "Project Management",
+        "Outreach",
+        "Interview",
+        "Marketing Research",
+        "Social Media Management"
+      ],
+      "relatedLinks": []
+    },
+    {
+      "type": "exposure",
+      "name": "Startup Weekends - Alpha",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/startup-weekend.jpg",
+      "description":
+        "Business owners are not the only one whom should equipped with a well understanding of the essential pillars of a successful business. There is no better way of doing good business better than understand how to build one. Get your hands dirty, build well, profit.",
+      "objective":
+        "Within a 54-hour tight deadline, strangers join together to pitch new startup ideas. Work from Friday night to develop a working prototype, demo and to deliver a presentation by Sunday evening.",
+      "parties": ["Startup Weekend, Cocoon"],
+      "achievement": ["Validation Award"],
+      "skills": ["Public Speaking", "Sprint/Scrum"],
+      "relatedLinks": [
+        {
+          "caption": "Startup Weekend Alpha",
+          "href":
+            "https://www.facebook.com/StartupWeekendHK/photos/?ref=page_internal"
+        },
+        {
+          "caption": "Cocoon",
+          "href": "https://www.hkcocoon.com/"
+        }
+      ]
+    },
+    {
+      "type": "exposure",
+      "name": "S.T.G.S.S. Career Development Day",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/cash-gun.jpg",
+      "description":
+        "Having knowledge without the opportunity to apply is a waste of resource, not to mention when you are not giving back to the community where you’ve been brought up from.",
+      "objective":
+        "To share my startup failures with the graduating seniors to-be, and what are the do’s and don'ts.",
+      "parties": ["S.T.G.S.S."],
+      "achievement": [],
+      "skills": ["Public Speaking"],
+      "relatedLinks": []
+    },
+    {
+      "type": "venture",
+      "name": "Ys, Dear",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/ysdear-pkg-lab-ylw.jpg",
+      "description":
+        "If you were ever a wise living person who aims to live long and prosper, 'Yes dear' is the only thing you need to know about while talking to your 'honey'.",
+      "objective":
+        "Import fresh farm honey directly from Winnipeg, Manitoba to Hong Kong",
+      "parties": ["Da bees"],
+      "achievement": [],
+      "skills": ["Importing", "Marketing", "Business Development"],
+      "relatedLinks": [
+        {
+          "caption": "Ys, Dear",
+          "href": "https://www.ysdear.com/"
+        }
+      ]
+    },
+    {
+      "type": "venture",
+      "name": "Punny T-shirt Design",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/tshirt-bad-milk.jpg",
+      "description":
+        "I prefer strangers staring right at my t-shirt rather than at my obvious flaws or into my sad, hollow soul.",
+      "objective":
+        "Solo design challenge to create funny and 'dank' t-shirt with 8-bit retro gaming style.",
+      "parties": [],
+      "achievement": [],
+      "skills": ["Adobe Photoshop", "Adobe Illustrator"],
+      "relatedLinks": [
+        {
+          "caption": "Redbubble Shop",
+          "href": "https://www.redbubble.com/people/IVANOUNG/shop"
+        }
+      ]
+    },
+    {
+      "type": "venture",
+      "name": "Cash Gun",
+      "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/cash-gun.jpg",
+      "description":
+        "There is no good reason to earn more money when you can't really show them off like you really own them. Roll'em hard like nothing but the true spirit of capitalism.",
+      "objective":
+        "Remodeling of the toy 'cash gun' with Soildwork and AutoCAD",
+      "parties": ["Youtube Tutorials", "Coefvfvs"],
+      "achievement": ["Massive hair loss"],
+      "skills": ["3D Modeling", "3D Printing", "AutoCAD", "Solidwork"],
+      "relatedLinks": [
+        {
+          "caption": "something",
+          "href": "https://www.google.com/"
+        }
+      ]
+    }
+  ]
 }
