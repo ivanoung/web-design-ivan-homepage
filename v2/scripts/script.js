@@ -21,7 +21,7 @@ class Updates {
         this.platform = obj.platform
     }
     crtNewEntity(){
-        $(".content-list").append(`<li><a href = ${this.link}><span class = "content-name bold-ul">${this.title}</span></a> - <span class = "content-platform">${this.platform}</span></li>`);
+        $(".content-list").append(`<li><a href = "${this.link}"><span class = "content-name bold-ul">${this.title}</span></a> - <span class = "content-platform">${this.platform}</span></li>`);
     }
 }
 
@@ -39,11 +39,11 @@ http.onreadystatechange = function () {
     else if (http.status==200){
         let respTxt = JSON.parse(http.responseText);
         let updates = respTxt.updates;
-        console.log(updates);
+        // console.log(updates);
         // Now updates is an array of shit
         updates.forEach(function(ele){
             let nuEntity = new Updates(ele);
-            nuEntity.crtNewEntity;
+            nuEntity.crtNewEntity();
         });
         
     }

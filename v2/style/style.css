@@ -1,15 +1,15 @@
 :root {
     --header-font: "Carter One", cursive;
     --body-font: 'Ubuntu Mono', monospace;
-}
-
-/* global styling */
-
-body{
     --main-color: #322F7C;
     --secondary-color: rgba(255,117,125,1);
     --secondary-color-shade: rgba(255,117,125,.8);
     --highlights: #f9f7ef;
+}
+
+/* global styling */
+body{
+    
     background-color: var(--main-color);
     color: var(--secondary-color);
     font-size: 62.5%;
