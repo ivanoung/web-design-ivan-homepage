@@ -1,23 +1,40 @@
-:root {
+/* global styling */
+
+body {
     --header-font: "Carter One", cursive;
     --body-font: 'Ubuntu Mono', monospace;
-    --main-color: #322F7C;
-    --secondary-color: rgba(255,117,125,1);
-    --secondary-color-shade: rgba(255,117,125,.8);
-    --highlights: #f9f7ef;
-}
-
-/* global styling */
-body{
     background-color: var(--main-color);
     color: var(--secondary-color);
     font-size: 62.5%;
 }
 
+#theme1 {
+    --main-color: #322F7C;
+    --secondary-color: rgba(255, 117, 125, 1);
+    --secondary-color-shade: rgba(255, 117, 125, .8);
+    --highlights: #f9f7ef;
+}
+
+#theme2 {
+    --main-color: #f9f7ef;
+    --secondary-color: #484ab3;
+    --secondary-color-shade: #ff2f7c;
+    --highlights: ;
+}
+
+#theme3 {
+    --main-color: #ffe100;
+    --secondary-color: #1c1c1c;
+    --secondary-color-shade: #322f7c;
+    --highlights: #f9f7ef;
+}
+
 /* Style specific reset */
-a{
+
+a {
     color: var(--secondary-color);
 }
+
 a:hover,
 a:active,
 a:focus {
@@ -25,13 +42,12 @@ a:focus {
     text-decoration: none;
 }
 
-
-ul{
+ul {
     margin: 0;
     padding: 0;
 }
 
-li{
+li {
     display: block;
 }
 
@@ -45,17 +61,23 @@ h2 {
     font-size: 1.999rem;
 }
 
-div, a, p, span, h3, h4 {
+div,
+a,
+p,
+span,
+h3,
+h4 {
     /* Need to adjust to responsive */
     line-height: 1.1;
     font-family: var(--body-font);
     font-size: 1.414rem;
 }
 
-
 /* Page wide styling */
+
 /* reusable page-wide */
-.outer-container{
+
+.outer-container {
     margin: auto;
     padding: 12.375vh 0;
     width: 80vw;
@@ -64,14 +86,14 @@ div, a, p, span, h3, h4 {
 
 .bold-ul {
     font-weight: bold;
-    text-decoration: underline solid ;
+    text-decoration: underline solid;
 }
 
 .ul {
     text-decoration: underline solid;
 }
 
-.hi-lte{
+.hi-lte {
     color: var(--highlights);
 }
 
@@ -83,22 +105,65 @@ div, a, p, span, h3, h4 {
     margin-bottom: 12.375vh;
 }
 
-.mg-bot-sm{
+.mg-bot-sm {
     margin-bottom: 8.413vh;
 }
 
+.mg-bot-xs {
+    /* TEmp */
+    margin-bottom: 2vh;
+}
+
 /* Top menu bar <resuable> */
-.top-menu{
+
+.top-menu {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.tp-mu-item{
+.tp-mu-item {
     margin: 0 1vw;
 }
 
 /* Functional styling */
+
+
+/* Huge ass caption when one see at first */
+
+/* What is unique to each page */
+
+/* List of contacting method, for helping readers to contact me */
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bx-fm-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.box-frame {
+    border: .5vmin solid var(--secondary-color);
+    box-shadow: 1.2vmin 1vmin grey;
+    display: inline-block;
+}
+
+.sqimg {
+    width: 100%;
+    height: 100%;
+}
+
+.one-forth {
+    width: 22%;
+    height: 22%;
+    background-color: white;
+}
+
+
 /* .slider {
     
     background-color: transparent;
@@ -131,16 +196,3 @@ div, a, p, span, h3, h4 {
     from {transform: translateX(-100%);}
     to {transform: translateX(0%);}
 } */
-
-
-/* Huge ass caption when one see at first */
-
-
-/* What is unique to each page */
-
-
-/* List of contacting method, for helping readers to contact me */
-.contact{
-    display: flex;
-    justify-content: space-between;
-}
