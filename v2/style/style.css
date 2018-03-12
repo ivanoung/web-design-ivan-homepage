@@ -3,18 +3,29 @@
     --body-font: 'Ubuntu Mono', monospace;
 }
 
+/* global styling */
+
 body{
     --main-color: #322F7C;
-    --secondary-color: #FF757D;
-    --hightlights: #ff2f7c;
+    --secondary-color: rgba(255,117,125,1);
+    --secondary-color-shade: rgba(255,117,125,.8);
+    --highlights: #f9f7ef;
     background-color: var(--main-color);
     color: var(--secondary-color);
-    font-size: 100%;
+    font-size: 62.5%;
 }
 
+/* Style specific reset */
 a{
     color: var(--secondary-color);
 }
+a:hover,
+a:active,
+a:focus {
+    color: var(--secondary-color-shade);
+    text-decoration: none;
+}
+
 
 ul{
     margin: 0;
@@ -27,45 +38,109 @@ li{
 
 h1 {
     font-family: var(--header-font);
-    font-size: 2.615rem;
+    font-size: 2.827rem;
 }
 
-a, p, span, h2, h3, h4 {
-
-    /* Need to adjust to responsive */
-    line-height: 1.2rem;
+h2 {
     font-family: var(--body-font);
-    font-size: 1.1rem;
+    font-size: 1.999rem;
 }
 
+div, a, p, span, h3, h4 {
+    /* Need to adjust to responsive */
+    line-height: 1.1;
+    font-family: var(--body-font);
+    font-size: 1.414rem;
+}
+
+
+/* Page wide styling */
+/* reusable page-wide */
 .outer-container{
     margin: auto;
-    padding-top: 10vmin;
+    padding: 12.375vh 0;
     width: 80vw;
     max-width: 1200px;
-    /* min-height: 100vh; */
-
 }
 
-.home {
-
+.bold-ul {
+    font-weight: bold;
+    text-decoration: underline solid ;
 }
 
+.ul {
+    text-decoration: underline solid;
+}
+
+.hi-lte{
+    color: var(--highlights);
+}
+
+.mg-bot-lg {
+    margin-bottom: 20vh;
+}
+
+.mg-bot-md {
+    margin-bottom: 12.375vh;
+}
+
+.mg-bot-sm{
+    margin-bottom: 8.413vh;
+}
+
+/* Top menu bar <resuable> */
 .top-menu{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 10vmin;
 }
 
-.banner{
-    margin-bottom: 12vmin;
+.tp-mu-item{
+    margin: 0 1vw;
 }
 
-.content{
-    margin-bottom: 14vmin;
+/* Functional styling */
+/* .slider {
+    
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+
+    transition: all 1s ease-in-out;
 }
 
+
+#medium{
+    --platform-color: green;
+}
+.slider:hover::before {
+    content: "";
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+
+    animation-duration: .3s;
+    animation-name: zoom;
+
+    background-color: var(--platform-color);
+}
+
+@keyframes zoom {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0%);}
+} */
+
+
+/* Huge ass caption when one see at first */
+
+
+/* What is unique to each page */
+
+
+/* List of contacting method, for helping readers to contact me */
 .contact{
     display: flex;
     justify-content: space-between;

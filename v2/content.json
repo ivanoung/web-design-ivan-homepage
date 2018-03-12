@@ -1,0 +1,20 @@
+{
+    "updates":[
+        {"title":"Space travling with p5.js","link":"https://codepen.io/ivanoung/details/eVpogw/","date":"dafault","platform":"Codepen"},
+        {"title":"Front-end Resource Collection","link":"https://github.com/ivanoung/curated-front-end-resources/","date":"dafault","platform":"Github"},
+        {"title":"Drawing Canvas with p5.js","link":"https://codepen.io/ivanoung/details/LQqvVm/","date":"dafault","platform":"Codepen"},
+        {"title":"The Wooden Chest in the Attic","link":"https://medium.com/the-wooden-chest-in-the-attic/","date":"dafault","platform":"Medium"},
+        {"title":"Simon Game - Game your memeory","link":"https://codepen.io/ivanoung/full/mXbwyp/","date":"dafault","platform":"Codepen"},
+    ],
+    "socialmedia":{
+        "facebook": "https://www.facebook.com/ivanoung",
+        "email":"ivanoung@gmail.com",
+        "twitter": "https://twitter.com/IvanTheChaos",
+        "github": "https://github.com/ivanoung",
+        "codepen": "https://codepen.io/ivanoung/",
+        "medium": "https://medium.com/@ivanoung",
+        "linkedin": "https://www.linkedin.com/in/ivanoung/"
+    }
+    
+}
+
