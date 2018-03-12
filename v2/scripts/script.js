@@ -30,14 +30,22 @@ class Updates {
 
 let http = new XMLHttpRequest();
 
-http.open('GET','http://127.0.0.1:8080/server/data.json');
-http.setRequestHeader("Date","Fri, Dec 31 1999 23:59:59 GMT");
+http.open('GET','https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json');
+// http.setRequestHeader("Date","Fri, Dec 31 1999 23:59:59 GMT");
 http.onreadystatechange = function () {
     if  (http.readyState != XMLHttpRequest.DONE){
         return;
     }
     else if (http.status==200){
-        console.log(JSON.parse(http.responseText));
+        let respTxt = JSON.parse(http.responseText);
+        let updates = respTxt.updates;
+        console.log(updates);
+        // Now updates is an array of shit
+        updates.forEach(function(ele){
+            let nuEntity = new Updates(ele);
+            nuEntity.crtNewEntity;
+        });
+        
     }
     else {
         console.log(`error occured: ${http.status}`);
