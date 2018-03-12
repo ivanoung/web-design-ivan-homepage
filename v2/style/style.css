@@ -9,7 +9,6 @@
 
 /* global styling */
 body{
-    
     background-color: var(--main-color);
     color: var(--secondary-color);
     font-size: 62.5%;
