@@ -1,6 +1,14 @@
 # https://www.ivanoung.io - Repository
 > Personal portfolio of Ivan Oung
 
+## v2.1 March-12-2018
+Completed the first page design, moving onto the second and the third, and still debating between having a one page or multiple page would be a good idea without the help of modules. However, the advantage of having a one-page is the loading speed as nothing has to be loaded from the beginning.
+
+Also debating between manipulating the template style with a seperate sheet of css or using a class to manipulate the style.
+### Added
+    - content.json for recording most of the content for the site for the purpose of reusability
+    
+
 ## v2.0 March-11-2018
 ### Removed
     - Old design
