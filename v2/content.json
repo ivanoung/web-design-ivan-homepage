@@ -43,6 +43,7 @@
   "getShitDone": [
     {
       "type": "project",
+      "uniqueID": "tshk",
       "name": "The Store HK",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/thestore-mb-wb.jpg",
       "description":
@@ -65,6 +66,7 @@
     },
     {
       "type": "project",
+      "uniqueID": "ips",
       "name": "Ipsos",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/ipsos.jpg",
       "description":
@@ -83,6 +85,7 @@
     },
     {
       "type": "project",
+      "uniqueID": "odltg",
       "name": "Open Digital Library of Traditional Games",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/unesco-tencent-logo.jpeg",
       "description":
@@ -109,6 +112,7 @@
     },
     {
       "type": "project",
+      "uniqueID": "coinv",
       "name": "Co-producer invitation",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/dis-ten.jpg",
       "description":
@@ -128,6 +132,7 @@
     },
     {
       "type": "exposure",
+      "uniqueID": "swa",
       "name": "Startup Weekends - Alpha",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/startup-weekend.jpg",
       "description":
@@ -151,6 +156,7 @@
     },
     {
       "type": "exposure",
+      "uniqueID": "scdd",
       "name": "S.T.G.S.S. Career Development Day",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/cash-gun.jpg",
       "description":
@@ -164,6 +170,7 @@
     },
     {
       "type": "venture",
+      "uniqueID": "ysd",
       "name": "Ys, Dear",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/ysdear-pkg-lab-ylw.jpg",
       "description":
@@ -182,6 +189,7 @@
     },
     {
       "type": "venture",
+      "uniqueID": "pts",
       "name": "Punny T-shirt Design",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/tshirt-bad-milk.jpg",
       "description":
@@ -200,6 +208,7 @@
     },
     {
       "type": "venture",
+      "uniqueID": "csg",
       "name": "Cash Gun",
       "preview": "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/images/cash-gun.jpg",
       "description":

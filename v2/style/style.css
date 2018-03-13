@@ -93,6 +93,10 @@ h4 {
     text-decoration: underline solid;
 }
 
+.obl{
+    font-style: oblique;
+}
+
 .hi-lte {
     color: var(--highlights);
 }
@@ -113,6 +117,11 @@ h4 {
     /* TEmp */
     margin-bottom: 2vh;
 }
+
+.hidden{
+    display: none;
+}
+
 
 /* Top menu bar <resuable> */
 
@@ -165,6 +174,52 @@ h4 {
     background-color: white;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-areas: "details skills";
+}
+
+#pj-details {
+    grid-area: details;
+}
+#pj-skills {
+    grid-area: skills;
+    display: flex;
+    flex-direction: column;
+}
+
+.thicc{
+    position: relative;
+    width: 50%;
+    height: auto;
+}
+
+.thicc:before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    z-index: 100;
+    background-color: black;
+    width: 100%;
+    height: 10%;
+    border: 1px solid grey;
+    transform: skewX(45deg) translateX(5%);
+}
+
+.thicc:after{
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: 0%;
+    z-index: 100;
+    background-color: black;
+    width: 10%;
+    height: 100%;
+    border: 1px solid grey;
+    transform: skewY(45deg) translateY(5%);
+}
 
 /* .slider {
     
