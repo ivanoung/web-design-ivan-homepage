@@ -1,5 +1,21 @@
-# https://www.ivanoung.io - Repository
+# Ivan Oung's Portfolio Repository
 > Personal portfolio of Ivan Oung
+[Trello To-Do list](https://trello.com/c/a2vtr4ha/24-to-do)
+
+## v.2.2 March-13-2018
+Comparing to the last version, this is by far the most up-to-date version with responsiveness and interaction embedded. So far, the basic structure of the website is done, leaving the interaction and the optimization to be improved in the future.
+
+### Added
+    - JSON, added a uniqueID tag for each project for target locating (because of lack of dynamic search-matching mechanism)
+    - Adding emoji
+    - Adding emoji replacement interaction
+    - Link of mail-to while clicking on the mailbox emoji
+    - Viewport breakpoint
+    - Viewport responsive layout (CSS)
+    - animate scrollTop for all the "project box" clicks
+
+### Pending
+    - Intro sentence js typing simulation animation
 
 ## v2.1 March-12-2018
 Completed the first page design, moving onto the second and the third, and still debating between having a one page or multiple page would be a good idea without the help of modules. However, the advantage of having a one-page is the loading speed as nothing has to be loaded from the beginning.

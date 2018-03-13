@@ -51,11 +51,13 @@
       "objective":
         "Plan and execute digital marketing strategy, perform small-scale front-end development, regulate and standardise business operations.",
       "parties": ["The Store HK"],
-      "achievement": [],
+      "achievement": ["Massive weight gain"],
       "skills": [
         "Project Management",
         "Front-End Development",
-        "Digital Marketing"
+        "Digital Marketing",
+        "Google Scripts",
+        "Shopify"
       ],
       "relatedLinks": [
         {
@@ -74,8 +76,8 @@
       "objective":
         "Help translate and localize international marketing surveys to its respective local dialect and customs. Specializes in English-Chinese translation projects.",
       "parties": ["Ipsos Canada"],
-      "achievement": [],
-      "skills": ["Translation"],
+      "achievement": ["Fastest Independent Project"],
+      "skills": ["Translation", "Proof-reading", "Project Management"],
       "relatedLinks": [
         {
           "caption": "Ipsos Canada",
@@ -94,7 +96,7 @@
         "Plan and execute digital marketing strategy, create content, conducting interviews, outreach to professionals with similar field of interest.",
       "parties": ["UNESCO", "Tencent", "Erasmus+ UK"],
       "achievement": [],
-      "skills": ["default"],
+      "skills": ["Translation", "Project Management", "Interview", "Outreach", "Community Building"],
       "relatedLinks": [
         {
           "caption": "UNESCO",
@@ -128,7 +130,11 @@
         "Marketing Research",
         "Social Media Management"
       ],
-      "relatedLinks": []
+      "relatedLinks": [{
+        "caption": "Discovery Channel Co-Producer Invitation",
+        "href":
+          "https://medium.com/itencent/discovery-channel-co-producer-invitation-2e94a0b138da"
+      }]
     },
     {
       "type": "exposure",
@@ -164,9 +170,12 @@
       "objective":
         "To share my startup failures with the graduating seniors to-be, and what are the do’s and don'ts.",
       "parties": ["S.T.G.S.S."],
-      "achievement": [],
+      "achievement": ["Opportunity to nurture"],
       "skills": ["Public Speaking"],
-      "relatedLinks": []
+      "relatedLinks": [{
+        "caption": "Sha Tin Government Secondary School",
+        "href": "https://www.stgss.edu.hk/"
+      }]
     },
     {
       "type": "venture",
@@ -196,7 +205,7 @@
         "I prefer strangers staring right at my t-shirt rather than at my obvious flaws or into my sad, hollow soul.",
       "objective":
         "Solo design challenge to create funny and 'dank' t-shirt with 8-bit retro gaming style.",
-      "parties": [],
+      "parties": ["Ivan Oung"],
       "achievement": [],
       "skills": ["Adobe Photoshop", "Adobe Illustrator"],
       "relatedLinks": [
@@ -217,10 +226,10 @@
         "Remodeling of the toy 'cash gun' with Soildwork and AutoCAD",
       "parties": ["Youtube Tutorials", "Coefvfvs"],
       "achievement": ["Massive hair loss"],
-      "skills": ["3D Modeling", "3D Printing", "AutoCAD", "Solidwork"],
+      "skills": ["3D Modeling", "3D Printing", "AutoCAD", "Solidwork", "Artists Collaboration"],
       "relatedLinks": [
         {
-          "caption": "something",
+          "caption": "Imgur Project Album",
           "href": "https://www.google.com/"
         }
       ]

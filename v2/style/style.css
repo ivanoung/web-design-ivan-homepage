@@ -8,6 +8,7 @@ body {
     font-size: 62.5%;
 }
 
+/* Switching colors by js */
 #theme1 {
     --main-color: #322F7C;
     --secondary-color: rgba(255, 117, 125, 1);
@@ -114,7 +115,6 @@ h4 {
 }
 
 .mg-bot-xs {
-    /* TEmp */
     margin-bottom: 2vh;
 }
 
@@ -122,8 +122,11 @@ h4 {
     display: none;
 }
 
+.clickable {
+    cursor: pointer;
+}
 
-/* Top menu bar <resuable> */
+/* Unit/element specific */
 
 .top-menu {
     display: flex;
@@ -133,28 +136,6 @@ h4 {
 
 .tp-mu-item {
     margin: 0 1vw;
-}
-
-/* Functional styling */
-
-
-/* Huge ass caption when one see at first */
-
-/* What is unique to each page */
-
-/* List of contacting method, for helping readers to contact me */
-
-.contact {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bx-fm-container {
-    display: grid;
-    grid-gap: 5vmin;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 1fr;
-    grid-auto-flow: row;
 }
 
 .box-frame {
@@ -172,12 +153,6 @@ h4 {
     width: 100%;
     height: 100%;
     background-color: white;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: 70% 1fr;
-    grid-template-areas: "details skills";
 }
 
 #pj-details {
@@ -220,6 +195,75 @@ h4 {
     border: 1px solid grey;
     transform: skewY(45deg) translateY(5%);
 }
+
+/* Mobile Responsive styling */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .contact{
+        display: flex;
+        flex-flow: column;
+        justify-items: center;
+    }
+    .bx-fm-container {
+        display: grid;
+        grid-gap: 3vmax;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-auto-flow: row;
+    }
+    .project-grid {
+        display: grid;
+        grid-template-rows: 70% 1fr;
+        grid-template-areas: "details"
+         "skills";
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .contact{
+        display: flex;
+        flex-flow: column;
+        justify-items: center;
+    }
+    .bx-fm-container {
+        display: grid;
+        grid-gap: 3vmax;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        grid-auto-flow: row;
+    }
+    .project-grid {
+        display: grid;
+        grid-template-rows: 70% 1fr;
+        grid-template-areas: "details"
+         "skills";
+    }
+} 
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .contact {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .bx-fm-container {
+        display: grid;
+        grid-gap: 5vmin;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;
+        grid-auto-flow: row;
+    }
+    .project-grid {
+        display: grid;
+        grid-template-columns: 70% 1fr;
+        grid-template-areas: "details skills";
+    }
+} 
+
+/* Potential */
 
 /* .slider {
     

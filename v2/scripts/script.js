@@ -1,18 +1,30 @@
 // Ivan's homepage
 // ---> by Ivan Oung
+
 // --------------------------------
 // ## 1. Variable declarations
+// ### 1.1 Updates entities (page1)
+// ### 1.2 Project entities (page2 & page3)
 // --------------------------------
 // ## 2. Functions declarations
-// ### 2.1 Related topic
+// ### 2.1 Ajax calling for website info, returning contents for page1 and page2
+// ### 2.2 id converter for the project (page3) page
 // --------------------------------
 // ## 3. Interaction declarations
-// ### 3.1 Related topic
+// ### 3.1 Page on load
+// ### 3.2 Preventing link clicks to refresh page
+// ### 3.3 Return home click
+// ### 3.4 Project collection page (page2) showing
+// ### 3.5 Individual project (page3) showing
+// ### 3.6 Swaping mailbox emojiiiiiiiiiiiiiiiiiii
+// ### 3.7 Send me an email with custom fields
 // --------------------------------
 // ## 4. Possible code improvements
+// Do you know da wae. SPIT ON HER SPIT MY BROTHAS!!!!
 
 
 // ## 1. Variable declarations
+// ### 1.1 Updates entities (page1)
 class Updates {
     constructor(obj) {
         // {this.title, this.link} = obj;
@@ -26,6 +38,7 @@ class Updates {
     }
 }
 
+// ### 1.2 Project entities (page2 & page3)
 class Projectent {
     constructor(obj) {
         // this is strings
@@ -61,7 +74,7 @@ class Projectent {
 
         $(targetID).append(
             `<div class="box-frame one-forth" >
-                <img class="ck-receiver sqimg"  id = "${this.uid}" src="${this.preview}"
+                <img class="ck-receiver sqimg clickable"  id = "${this.uid}" src="${this.preview}"
                     alt="${this.name}">
         </div>`
         );
@@ -78,10 +91,10 @@ class Projectent {
 
         // Append content into individual sector
         $(".individual").append(`
-        <h1>${this.name}</h1>
+        <h1 class = "mg-bot-xs">${this.name}</h1>
         <div class="project-grid">
             <div class="" id="pj-details">
-                <div class="thicc mg-bot-md">
+                <div class="thicc mg-bot-sm">
                     <img src="${this.preview}" alt="${this.name}"
                         class="sqimg">
                 </div>
@@ -120,7 +133,7 @@ class Projectent {
 }
 
 // ## 2. Functions declarations
-// ### 2.1 Ajax calling for website info
+// ### 2.1 Ajax calling for website info, returning contents for page1 and page2
 // Load at start
 let http = new XMLHttpRequest();
 http.open('GET', 'https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json');
@@ -150,7 +163,7 @@ http.onreadystatechange = function () {
 http.send();
 
 
-// Don't even know what I am doing
+// ### 2.2 id converter for the project (page3) page
 function asyncRetrive(checker) {
 
     let i = 0;
@@ -198,38 +211,52 @@ function asyncRetrive(checker) {
         });
 }
 
-// Load on click
 
 
-// asyncRetrive("omg");
-
-
+// ## 3. Interaction declarations
+// ### 3.1 Page on load
 $(document).ready(() => {
     $(".page1").show();
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
+    $("#in").hide();
 })
-
+// ### 3.2 Preventing link clicks to refresh page
 $("a").click(el => el.preventDefault());
 
+// ### 3.3 Return home click
 $("#rthome").click(() => {
     $(".page1").show();
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
 })
 
+// ### 3.4 Project collection page (page2) showing
 $("#epv").click(() => {
     $(".page2").show();
     $(".page1, .page3").hide();
     $("body").attr("id", "theme2");
 })
 
+// ### 3.5 Individual project (page3) showing
+// Bloody fracking hell use on becuase of dynamic content load on click
 $('body').on('click', ".ck-receiver", function () {
-
+    $("body, html").animate({scrollTop:0},1000);
     $(".page1, .page2").hide();
     $(".page3").show();
     $("body").attr("id", "theme3");
     let checker = $(this).attr("id");
-    asyncRetrive(checker);
-    
+    asyncRetrive(checker);   
+})
+
+// ### 3.6 Swaping mailbox emojiiiiiiiiiiiiiiiiiii
+$("body").on("mouseenter","#mailing",()=> $("#out, #in").toggle());
+$("body").on("mouseleave","#mailing",()=> $("#out, #in").toggle());
+
+// ### 3.7 Send me an email with custom fields
+$("#mailing").click(()=>{
+    let subject = $("#mail-subject").text();
+    let name = $("#mail-name").text();
+
+    window.open(`mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`);
 })
