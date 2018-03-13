@@ -60,11 +60,9 @@ class Projectent {
         }
 
         $(targetID).append(
-            `<div class="box-frame one-forth" id = "${this.uid}">
-            <a href="${this.preview}">
-                <img class="sqimg" src="${this.preview}"
+            `<div class="box-frame one-forth" >
+                <img class="ck-receiver sqimg"  id = "${this.uid}" src="${this.preview}"
                     alt="${this.name}">
-            </a>
         </div>`
         );
     }
@@ -74,7 +72,7 @@ class Projectent {
         document.querySelector(".individual").innerHTML = "";
 
         // Clear up href
-        let hrefStructure = []; 
+        let hrefStructure = [];
         this.rehref.forEach(anObj => hrefStructure.push(`<a class = "obl" href = "${anObj.href}">${anObj.caption}</a>`));
         hrefStructure.join(", ");
 
@@ -134,7 +132,6 @@ http.onreadystatechange = function () {
         let respTxt = JSON.parse(http.responseText);
         let updates = respTxt.updates;
         let projects = respTxt.getShitDone;
-        // console.log(updates);
         // Now updates is an array of shit
         updates.forEach(function (ele) {
             let nuEntity = new Updates(ele);
@@ -153,13 +150,47 @@ http.onreadystatechange = function () {
 http.send();
 
 
+// Don't even know what I am doing
+function asyncRetrive(checker) {
 
-// Load on click
-function asyncRetrive(targetID) {
+    let i = 0;
+    switch(checker){
+        case "tshk":
+            i = 0;
+            break;
+        case "ips":
+            i = 1;
+            break;
+        case "odltg":
+            i = 2;
+            break;
+        case "coinv":
+            i = 3;
+            break;
+        case "swa":
+            i = 4;
+            break;
+        case "scdd":
+            i = 5;
+            break;
+        case "ysd":
+            i = 6;
+            break;
+        case "pts":
+            i = 7;
+            break;
+        case "csg":
+            i = 8;
+            break;
+
+        default:
+            break;
+    }
+
+
     $.get("https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json")
         .done((ele) => {
-            console.log(JSON.parse(ele).getShitDone[0]);
-            let testres = new Projectent(JSON.parse(ele).getShitDone[0]);
+            let testres = new Projectent(JSON.parse(ele).getShitDone[i]);
             testres.display();
         })
         .fail((ele) => {
@@ -167,28 +198,38 @@ function asyncRetrive(targetID) {
         });
 }
 
+// Load on click
+
+
 // asyncRetrive("omg");
 
 
-$(document).ready(()=>{
+$(document).ready(() => {
     $(".page1").show();
     $(".page2, .page3").hide();
-    $("body").attr("id","theme1");
+    $("body").attr("id", "theme1");
 })
 
 $("a").click(el => el.preventDefault());
 
-$("#rthome").click(()=>{
+$("#rthome").click(() => {
     $(".page1").show();
     $(".page2, .page3").hide();
-    $("body").attr("id","theme1");
+    $("body").attr("id", "theme1");
 })
 
-$("#epv").click((el)=>{
-    // el.preventDefault();
+$("#epv").click(() => {
     $(".page2").show();
     $(".page1, .page3").hide();
-    $("body").attr("id","theme2");
-    console.log("Home click working");
+    $("body").attr("id", "theme2");
 })
 
+$('body').on('click', ".ck-receiver", function () {
+
+    $(".page1, .page2").hide();
+    $(".page3").show();
+    $("body").attr("id", "theme3");
+    let checker = $(this).attr("id");
+    asyncRetrive(checker);
+    
+})
