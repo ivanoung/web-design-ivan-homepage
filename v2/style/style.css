@@ -141,15 +141,17 @@ h4 {
 }
 
 .bx-fm-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-gap: 5vmin;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-flow: row;
 }
 
 .box-frame {
-    border: .5vmin solid var(--secondary-color);
-    box-shadow: 1.2vmin 1vmin grey;
-    display: inline-block;
+    /* border: 1vmin solid var(--secondary-color); */
+    box-shadow: 1.2vmin 1vmin grey, 1vmin 1vmin inset;
+    /* display: inline-block; */
 }
 
 .sqimg {
@@ -158,8 +160,8 @@ h4 {
 }
 
 .one-forth {
-    width: 22%;
-    height: 22%;
+    width: 100%;
+    height: 100%;
     background-color: white;
 }
 
