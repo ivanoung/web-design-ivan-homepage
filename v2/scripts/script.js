@@ -132,6 +132,42 @@ class Projectent {
     }
 }
 
+// class Typingeff{
+//     constructor(str){
+//         this.message = str.split("");
+//     }
+//     typeout(target){
+//         target.text()+=this.message[target.text().length];
+
+//         if (target.text().length<this.message.lenth){
+            
+//         }
+//     }
+// }
+const introduction = "I'm a front-end developer, with digital marketing and interdisciplinary translation background."
+const introArr = introduction.split('');
+let count = 0;
+
+function dashOut (arr){
+    if (count<arr.length) {
+        document.querySelector("#self-introduction").textContent += arr[count];
+        count++;
+        setTimeout(function(){dashOut(arr)},interval(arr[count]));
+    }
+    
+}
+
+function interval(letter) {
+    console.log(letter);
+    if (letter == ";" || letter == "." || letter == ",") {
+        return Math.floor(Math.random() * 500 + 500);
+    } else {
+        return Math.floor(Math.random() * 130 + 5);
+    }
+}
+
+
+
 // ## 2. Functions declarations
 // ### 2.1 Ajax calling for website info, returning contents for page1 and page2
 // Load at start
@@ -220,6 +256,8 @@ $(document).ready(() => {
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
     $("#in").hide();
+    dashOut(introArr);
+
 })
 // ### 3.2 Preventing link clicks to refresh page
 $("a").click(el => el.preventDefault());
