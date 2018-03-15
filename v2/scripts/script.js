@@ -256,21 +256,24 @@ $(document).ready(() => {
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
     $("#in").hide();
+    
     dashOut(introArr);
 
 })
 // ### 3.2 Preventing link clicks to refresh page
-$("a").click(el => el.preventDefault());
+// $("a").click(el => el.preventDefault());
 
 // ### 3.3 Return home click
-$("#rthome").click(() => {
+$("#rthome").click((event) => {
+    event.preventDefault();
     $(".page1").show();
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
 })
 
 // ### 3.4 Project collection page (page2) showing
-$("#epv").click(() => {
+$("#epv").click((event) => {
+    event.preventDefault();
     $(".page2").show();
     $(".page1, .page3").hide();
     $("body").attr("id", "theme2");
@@ -278,7 +281,8 @@ $("#epv").click(() => {
 
 // ### 3.5 Individual project (page3) showing
 // Bloody fracking hell use on becuase of dynamic content load on click
-$('body').on('click', ".ck-receiver", function () {
+$('body').on('click', ".ck-receiver", (event)=> {
+    event.preventDefault();
     $("body, html").animate({scrollTop:0},1000);
     $(".page1, .page2").hide();
     $(".page3").show();
@@ -292,7 +296,7 @@ $("body").on("mouseenter","#mailing",()=> $("#out, #in").toggle());
 $("body").on("mouseleave","#mailing",()=> $("#out, #in").toggle());
 
 // ### 3.7 Send me an email with custom fields
-$("#mailing").click(()=>{
+$("#mailing").click((el)=>{
     let subject = $("#mail-subject").text();
     let name = $("#mail-name").text();
 

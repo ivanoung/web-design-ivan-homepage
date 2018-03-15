@@ -134,6 +134,18 @@ h4 {
     overflow: hidden;
 }
 
+#self-introduction:after{
+    content: " | ";
+    animation: blinky 1s linear infinite;
+}
+
+@keyframes blinky {
+    0% {opacity:0;}
+    49.9% {opacity:0;}
+    50% {opacity:1;}
+    99.9% {opacity:1;}
+}
+
 .top-menu {
     display: flex;
     justify-content: space-between;
