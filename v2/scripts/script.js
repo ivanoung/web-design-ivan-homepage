@@ -165,7 +165,12 @@ http.send();
 
 // ### 2.2 id converter for the project (page3) page
 function asyncRetrive(checker) {
+    let checkerMap = {
+        "tshk": 1,
+        "ips": 2
+    }
 
+    let r = checkerMap[checker];
     let i = 0;
     switch(checker){
         case "tshk":
