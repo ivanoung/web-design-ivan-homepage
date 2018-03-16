@@ -235,6 +235,9 @@ h4 {
         grid-template-areas: "details"
          "skills";
     }
+    #invitation{
+        width: 80%;
+    }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -260,6 +263,9 @@ h4 {
     #self-introduction {
         width: 90%;
     }
+    #invitation{
+        width: 80%;
+    }
 } 
 
 
@@ -284,6 +290,9 @@ h4 {
     }
     #self-introduction {
         width: 70%;
+    }
+    #invitation{
+        width: 60%;
     }
 } 
 
