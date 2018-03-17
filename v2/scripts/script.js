@@ -12,7 +12,7 @@
 // --------------------------------
 // ## 3. Interaction declarations
 // ### 3.1 Page on load
-// ### 3.2 Preventing link clicks to refresh page
+// ### 3.2 Preventing link clicks to refresh page (retired)
 // ### 3.3 Return home click
 // ### 3.4 Project collection page (page2) showing
 // ### 3.5 Individual project (page3) showing
@@ -199,8 +199,6 @@ function asyncRetrive(checker) {
         });
 }
 
-
-
 // ## 3. Interaction declarations
 // ### 3.1 Page on load
 $(document).ready(() => {
@@ -208,12 +206,8 @@ $(document).ready(() => {
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
     $("#in").hide();
-    
     dashOut(introArr);
-
 })
-// ### 3.2 Preventing link clicks to refresh page
-// $("a").click(el => el.preventDefault());
 
 // ### 3.3 Return home click
 $("#rthome").click((event) => {
@@ -251,6 +245,5 @@ $("body").on("mouseleave","#mailing",()=> $("#out, #in").toggle());
 $("#mailing").click((el)=>{
     let subject = $("#mail-subject").text();
     let name = $("#mail-name").text();
-
     window.open(`mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`);
 })
