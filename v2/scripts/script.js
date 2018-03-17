@@ -132,18 +132,6 @@ class Projectent {
     }
 }
 
-// class Typingeff{
-//     constructor(str){
-//         this.message = str.split("");
-//     }
-//     typeout(target){
-//         target.text()+=this.message[target.text().length];
-
-//         if (target.text().length<this.message.lenth){
-            
-//         }
-//     }
-// }
 const introduction = "I'm a front-end developer, with digital marketing and interdisciplinary translation background."
 const introArr = introduction.split('');
 let count = 0;
@@ -240,6 +228,7 @@ function asyncRetrive(checker) {
     $.get("https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json")
         .done((ele) => {
             let testres = new Projectent(JSON.parse(ele).getShitDone[i]);
+            
             testres.display();
         })
         .fail((ele) => {
@@ -281,13 +270,14 @@ $("#epv").click((event) => {
 
 // ### 3.5 Individual project (page3) showing
 // Bloody fracking hell use on becuase of dynamic content load on click
-$('body').on('click', ".ck-receiver", (event)=> {
+$('body').on('click', ".ck-receiver", function(event){
     event.preventDefault();
     $("body, html").animate({scrollTop:0},1000);
     $(".page1, .page2").hide();
     $(".page3").show();
     $("body").attr("id", "theme3");
     let checker = $(this).attr("id");
+    console.log(checker);
     asyncRetrive(checker);   
 })
 
