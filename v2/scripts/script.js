@@ -189,46 +189,9 @@ http.send();
 
 // ### 2.2 id converter for the project (page3) page
 function asyncRetrive(checker) {
-
-    let i = 0;
-    switch(checker){
-        case "tshk":
-            i = 0;
-            break;
-        case "ips":
-            i = 1;
-            break;
-        case "odltg":
-            i = 2;
-            break;
-        case "coinv":
-            i = 3;
-            break;
-        case "swa":
-            i = 4;
-            break;
-        case "scdd":
-            i = 5;
-            break;
-        case "ysd":
-            i = 6;
-            break;
-        case "pts":
-            i = 7;
-            break;
-        case "csg":
-            i = 8;
-            break;
-
-        default:
-            break;
-    }
-
-
     $.get("https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json")
         .done((ele) => {
-            let testres = new Projectent(JSON.parse(ele).getShitDone[i]);
-            
+            let testres = new Projectent(...(JSON.parse(ele).getShitDone.filter(arrUnit=>arrUnit["uniqueID"] == checker)));
             testres.display();
         })
         .fail((ele) => {
@@ -277,7 +240,6 @@ $('body').on('click', ".ck-receiver", function(event){
     $(".page3").show();
     $("body").attr("id", "theme3");
     let checker = $(this).attr("id");
-    console.log(checker);
     asyncRetrive(checker);   
 })
 
