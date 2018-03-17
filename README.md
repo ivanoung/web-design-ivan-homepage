@@ -9,6 +9,7 @@ After reviewing website with Karan, few point have been pointed out, that the de
 ### Added
     - Typing effect on the landing page for captative effect
     - Adding prevent default on specific link clicks instead of global
+    - Adding favicon to website
 
 ### Changed
     - Replace swtich case with deconstruction of array (Page 2 Ajax pullout)
