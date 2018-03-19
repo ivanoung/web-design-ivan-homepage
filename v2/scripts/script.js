@@ -245,15 +245,17 @@ $("body").on("mouseenter","#mailing",()=> $("#out, #in").toggle());
 $("body").on("mouseleave","#mailing",()=> $("#out, #in").toggle());
 
 // ### 3.7 Send me an email with custom fields
-$("#mailing").click((el)=>{
+$("#mailing").click(el => {
     let subject = $("#mail-subject").text();
     let name = $("#mail-name").text();
-    window.open(`mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`);
-})
-
-// ### 3.8 Clicking first page to second page
-$('body').on('click','.key-message',function(event){
+    window.open(
+      `mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`
+    );
+  });
+  
+  // ### 3.8 Clicking first page to second page
+  $("body").on("click", ".key-message", function(event) {
     $(".page2").show();
     $(".page1, .page3").hide();
     $("body").attr("id", "theme2");
-})
+  });
