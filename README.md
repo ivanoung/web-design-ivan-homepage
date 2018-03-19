@@ -3,6 +3,11 @@
 [Trello To-Do list](https://trello.com/c/a2vtr4ha/24-to-do)
 
 
+## v2.4 March-19-2018
+### Added
+    - Replacing DOM after first paragraph typing effect
+    - Add clicking effect to first paragraph
+
 ## v2.3 March-17-2018
 After reviewing website with Karan, few point have been pointed out, that the design is not captative enough to capture the first few seconds of visitors' attention. Also, becuase of using jQuery, ()=> have conflict with the scope of "this", where needed to changed back to function(){}.
 

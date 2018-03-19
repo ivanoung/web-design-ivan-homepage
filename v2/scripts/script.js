@@ -142,6 +142,9 @@ function dashOut (arr){
         count++;
         setTimeout(function(){dashOut(arr)},interval(arr[count]));
     }
+    else {
+        $("#self-introduction").html(`I'm a <span class = "key-message">front-end developer</span>, with <span class = "key-message">digital marketing</span> and <span class = "key-message">interdisciplinary translation</span> background.`);
+    }
     
 }
 
@@ -218,7 +221,7 @@ $("#rthome").click((event) => {
 })
 
 // ### 3.4 Project collection page (page2) showing
-$("#epv").click((event) => {
+$("#epv").on("click",(event) => {
     event.preventDefault();
     $(".page2").show();
     $(".page1, .page3").hide();
@@ -246,4 +249,11 @@ $("#mailing").click((el)=>{
     let subject = $("#mail-subject").text();
     let name = $("#mail-name").text();
     window.open(`mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`);
+})
+
+// ### 3.8 Clicking first page to second page
+$('body').on('click','.key-message',function(event){
+    $(".page2").show();
+    $(".page1, .page3").hide();
+    $("body").attr("id", "theme2");
 })
