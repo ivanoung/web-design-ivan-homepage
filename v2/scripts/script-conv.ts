@@ -22,6 +22,27 @@
 // ## 4. Possible code improvements
 // Do you know da wae. SPIT ON HER SPIT MY BROTHAS!!!!
 
+// ## 0. Types declarations
+type UpdateEntity = {
+  title: string,
+  link: string,
+  date: string,
+  platform: string
+};
+type ProjectEntity = {
+  type: string,
+  uniqueID: string,
+  name: string,
+  preview: string,
+  description: string,
+  objective: string,
+  parties: string[],
+  achievement: string[],
+  skills: string[],
+  relatedLinks: { caption: string, href: string }[]
+};
+
+
 // ## 1. Variable declarations
 // ### 1.1 Updates entities (page1)
 class Updates {
@@ -29,22 +50,19 @@ class Updates {
   link: string;
   date: string;
   platform: string;
-  
-    constructor(obj: {title: string, link: string,date: string, platform: string}) {
-    
 
-
+  constructor(obj: UpdateEntity) {
     this.title = obj.title;
     this.link = obj.link;
     this.date = obj.date;
     this.platform = obj.platform;
   }
-  crtNewEntity() {
+  public crtNewEntity() {
     $(".content-list").append(
       `<li><a href = "${this.link}"><span class = "content-name bold-ul">${
-        this.title
+      this.title
       }</span></a> - <span class = "content-platform">${
-        this.platform
+      this.platform
       }</span></li>`
     );
   }
@@ -52,7 +70,19 @@ class Updates {
 
 // ### 1.2 Project entities (page2 & page3)
 class Projectent {
-  constructor(obj) {
+  type: string;
+  uid: string;
+  name: string;
+  preview: string;
+  description: string;
+  objective: string;
+  parties: string[];
+  achiv: string[];
+  skill: string[];
+  rehref: { caption: string, href: string }[];
+
+
+  constructor(obj: ProjectEntity) {
     // this is strings
     this.type = obj.type;
     this.uid = obj.uniqueID;
@@ -68,7 +98,7 @@ class Projectent {
     this.rehref = obj.relatedLinks;
   }
 
-  fetch() {
+  public fetch() {
     let targetID = "";
     switch (this.type) {
       case "project":
@@ -87,14 +117,14 @@ class Projectent {
     $(targetID).append(
       `<div class="box-frame one-forth" >
                 <img class="ck-receiver sqimg clickable"  id = "${
-                  this.uid
-                }" src="${this.preview}"
+      this.uid
+      }" src="${this.preview}"
                     alt="${this.name}">
         </div>`
     );
   }
 
-  display() {
+  public display() {
     // reset html
     document.querySelector(".individual").innerHTML = "";
 
@@ -155,11 +185,11 @@ const introduction =
 const introArr = introduction.split("");
 let count = 0;
 
-function dashOut(arr) {
+function dashOut(arr: string[]) {
   if (count < arr.length) {
     document.querySelector("#self-introduction").textContent += arr[count];
     count++;
-    setTimeout(function() {
+    setTimeout(function () {
       dashOut(arr);
     }, interval(arr[count]));
   } else {
@@ -169,8 +199,7 @@ function dashOut(arr) {
   }
 }
 
-function interval(letter) {
-  console.log(letter);
+function interval(letter: string) {
   if (letter == ";" || letter == "." || letter == ",") {
     return Math.floor(Math.random() * 500 + 500);
   } else {
@@ -187,7 +216,7 @@ http.open(
   "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json"
 );
 // http.setRequestHeader("Date","Fri, Dec 31 1999 23:59:59 GMT");
-http.onreadystatechange = function() {
+http.onreadystatechange = function () {
   if (http.readyState != XMLHttpRequest.DONE) {
     return;
   } else if (http.status == 200) {
@@ -195,12 +224,12 @@ http.onreadystatechange = function() {
     let updates = respTxt.updates;
     let projects = respTxt.getShitDone;
     // Now updates is an array of shit
-    updates.forEach(function(ele) {
+    updates.forEach(function (ele: UpdateEntity) {
       let nuEntity = new Updates(ele);
       nuEntity.crtNewEntity();
     });
 
-    projects.forEach(function(boxes) {
+    projects.forEach(function (boxes: ProjectEntity) {
       let newBox = new Projectent(boxes);
       newBox.fetch();
     });
@@ -210,7 +239,7 @@ http.onreadystatechange = function() {
 };
 http.send();
 // ### 2.2 id converter for the project (page3) page
-function asyncRetrive(checker) {
+function asyncRetrive(checker: string) {
   $.get(
     "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json"
   )
@@ -255,7 +284,7 @@ $("#epv").on("click", event => {
 
 // ### 3.5 Individual project (page3) showing
 // Bloody fracking hell use on becuase of dynamic content load on click
-$("body").on("click", ".ck-receiver", function(event) {
+$("body").on("click", ".ck-receiver", function (event) {
   event.preventDefault();
   $("body, html").animate({ scrollTop: 0 }, 1000);
   $(".page1, .page2").hide();
@@ -279,7 +308,7 @@ $("#mailing").click(el => {
 });
 
 // ### 3.8 Clicking first page to second page
-$("body").on("click", ".key-message", function(event) {
+$("body").on("click", ".key-message", function (event) {
   $(".page2").show();
   $(".page1, .page3").hide();
   $("body").attr("id", "theme2");
