@@ -126,10 +126,14 @@ class Projectent {
 
   public display() {
     // reset html
-    document.querySelector(".individual").innerHTML = "";
+    let strr = document.querySelector(".individual");
+    if (strr instanceof Element){
+      strr.innerHTML = "";
+    }
+    
 
     // Clear up href
-    let hrefStructure = [];
+    let hrefStructure:String[] = [];;
     this.rehref.forEach(anObj =>
       hrefStructure.push(
         `<a class = "obl" href = "${anObj.href}">${anObj.caption}</a>`
@@ -180,14 +184,16 @@ class Projectent {
   }
 }
 
-const introduction =
-  "I'm a front-end developer, with digital marketing and interdisciplinary translation background.";
-const introArr = introduction.split("");
-let count = 0;
+//### 1.3  
+const introduction: string = "I'm a front-end developer, with digital marketing and interdisciplinary translation background.";
+const introArr:string[] = introduction.split("");
+let count:number = 0;
 
 function dashOut(arr: string[]) {
-  if (count < arr.length) {
-    document.querySelector("#self-introduction").textContent += arr[count];
+  let target: Element | null = document.querySelector("#self-introduction");
+
+  if (count < arr.length && target instanceof Element) {
+    target.textContent += arr[count];
     count++;
     setTimeout(function () {
       dashOut(arr);
@@ -215,7 +221,6 @@ http.open(
   "GET",
   "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json"
 );
-// http.setRequestHeader("Date","Fri, Dec 31 1999 23:59:59 GMT");
 http.onreadystatechange = function () {
   if (http.readyState != XMLHttpRequest.DONE) {
     return;
@@ -246,7 +251,7 @@ function asyncRetrive(checker: string) {
     .done(ele => {
       let testres = new Projectent(
         ...JSON.parse(ele).getShitDone.filter(
-          arrUnit => arrUnit["uniqueID"] == checker
+          (arrUnit:ProjectEntity)  => {arrUnit["uniqueID"] == checker}
         )
       );
       testres.display();
@@ -291,7 +296,10 @@ $("body").on("click", ".ck-receiver", function (event) {
   $(".page3").show();
   $("body").attr("id", "theme3");
   let checker = $(this).attr("id");
-  asyncRetrive(checker);
+  if (typeof checker == "string"){
+    asyncRetrive(checker);
+  }
+  
 });
 
 // ### 3.6 Swaping mailbox emojiiiiiiiiiiiiiiiiiii
