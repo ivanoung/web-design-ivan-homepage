@@ -29,18 +29,18 @@ type UpdateEntity = {
   date: string,
   platform: string
 };
-type ProjectEntity = {
-  type: string,
-  uniqueID: string,
-  name: string,
-  preview: string,
-  description: string,
-  objective: string,
-  parties: string[],
-  achievement: string[],
-  skills: string[],
-  relatedLinks: { caption: string, href: string }[]
-};
+// type ProjectEntity = {
+//   type: string,
+//   uniqueID: string,
+//   name: string,
+//   preview: string,
+//   description: string,
+//   objective: string,
+//   parties: string[],
+//   achievement: string[],
+//   skills: string[],
+//   relatedLinks: { caption: string, href: string }[]
+// };
 
 
 // ## 1. Variable declarations
@@ -82,7 +82,7 @@ class Projectent {
   rehref: { caption: string, href: string }[];
 
 
-  constructor(obj: ProjectEntity) {
+  constructor(obj: any) {
     // this is strings
     this.type = obj.type;
     this.uid = obj.uniqueID;
@@ -124,7 +124,7 @@ class Projectent {
     );
   }
 
-  public display() {
+  public display(){
     // reset html
     let strr = document.querySelector(".individual");
     if (strr instanceof Element){
@@ -234,7 +234,7 @@ http.onreadystatechange = function () {
       nuEntity.crtNewEntity();
     });
 
-    projects.forEach(function (boxes: ProjectEntity) {
+    projects.forEach(function (boxes: Projectent) {
       let newBox = new Projectent(boxes);
       newBox.fetch();
     });
@@ -248,13 +248,19 @@ function asyncRetrive(checker: string) {
   $.get(
     "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json"
   )
-    .done(ele => {
-      let testres = new Projectent(
-        ...JSON.parse(ele).getShitDone.filter(
-          (arrUnit:ProjectEntity)  => {arrUnit["uniqueID"] == checker}
-        )
+    .done(ele => {      
+      // let singleProject;
+      // let themp = JSON.parse(ele).getShitDone.filter(
+      //   (arrUnit:ProjectEntity)  => {arrUnit["uniqueID"] == checker});
+      //   if (themp.length===1){
+      //     singleProject = themp[0];
+      //     singleProject.display();
+      //   }
+
+      let singleProject = new Projectent(
+        (JSON.parse(ele).getShitDone.filter((arrUnit: any)  => arrUnit["uniqueID"] == checker))[0]
       );
-      testres.display();
+      singleProject.display();
     })
     .fail(ele => {
       console.log("oh shit");
