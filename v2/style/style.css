@@ -14,6 +14,7 @@ body {
     --secondary-color: rgba(255, 117, 125, 1);
     --secondary-color-shade: rgba(250, 226, 227, 0.8);
     --highlights: #f9f7ef;
+    --strong-hilight: #ff2f7c;
 }
 
 #theme2 {
@@ -128,6 +129,66 @@ h4 {
 
 /* Unit/element specific */
 
+#self-introduction {
+    
+    white-space: initial;
+    overflow: hidden;
+}
+
+#self-introduction:after{
+    content: " | ";
+    animation: blinky 1s linear infinite;
+}
+
+@keyframes blinky {
+    0% {opacity:0;}
+    49.9% {opacity:0;}
+    50% {opacity:1;}
+    99.9% {opacity:1;}
+}
+
+
+.key-message{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-decoration: underline solid;
+    color: var(--strong-hilight);
+    display: inline;
+    font-size: 100%;
+    font-family: var(--header-font);
+    transition: all .5s linear;
+}
+
+.key-message:hover{
+    color: var(--highlights);
+}
+/* 
+.key-message:hover::after{
+    content: "";
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: -50%;
+    z-index: -1;
+
+    animation-duration: 1s;
+    animation-name: zoom;
+
+    background-color: var(--highlights);
+}
+
+@keyframes zoom{
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+} */
+
+
 .top-menu {
     display: flex;
     justify-content: space-between;
@@ -217,6 +278,9 @@ h4 {
         grid-template-areas: "details"
          "skills";
     }
+    #invitation{
+        width: 80%;
+    }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -239,6 +303,12 @@ h4 {
         grid-template-areas: "details"
          "skills";
     }
+    #self-introduction {
+        width: 90%;
+    }
+    #invitation{
+        width: 80%;
+    }
 } 
 
 
@@ -260,6 +330,12 @@ h4 {
         display: grid;
         grid-template-columns: 70% 1fr;
         grid-template-areas: "details skills";
+    }
+    #self-introduction {
+        width: 70%;
+    }
+    #invitation{
+        width: 60%;
     }
 } 
 

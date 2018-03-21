@@ -1,43 +1,19 @@
+"use strict";
 // Ivan's homepage
 // ---> by Ivan Oung
-
-// --------------------------------
-// ## 1. Variable declarations
-// ### 1.1 Updates entities (page1)
-// ### 1.2 Project entities (page2 & page3)
-// --------------------------------
-// ## 2. Functions declarations
-// ### 2.1 Ajax calling for website info, returning contents for page1 and page2
-// ### 2.2 id converter for the project (page3) page
-// --------------------------------
-// ## 3. Interaction declarations
-// ### 3.1 Page on load
-// ### 3.2 Preventing link clicks to refresh page (retired)
-// ### 3.3 Return home click
-// ### 3.4 Project collection page (page2) showing
-// ### 3.5 Individual project (page3) showing
-// ### 3.6 Swaping mailbox emojiiiiiiiiiiiiiiiiiii
-// ### 3.7 Send me an email with custom fields
-// --------------------------------
-// ## 4. Possible code improvements
-// Do you know da wae. SPIT ON HER SPIT MY BROTHAS!!!!
-
-
 // ## 1. Variable declarations
 // ### 1.1 Updates entities (page1)
 class Updates {
     constructor(obj) {
-        // {this.title, this.link} = obj;
         this.title = obj.title;
         this.link = obj.link;
         this.date = obj.date;
-        this.platform = obj.platform
+        this.platform = obj.platform;
     }
     crtNewEntity() {
         $(".content-list").append(`<li><a href = "${this.link}"><span class = "content-name bold-ul">${this.title}</span></a> - <span class = "content-platform">${this.platform}</span></li>`);
     }
 }
-
 // ### 1.2 Project entities (page2 & page3)
 class Projectent {
     constructor(obj) {
@@ -55,7 +31,6 @@ class Projectent {
         //    this is an array of objects
         this.rehref = obj.relatedLinks;
     }
-
     fetch() {
         let targetID = "";
         switch (this.type) {
@@ -71,24 +46,18 @@ class Projectent {
             default:
                 break;
         }
-
-        $(targetID).append(
-            `<div class="box-frame one-forth" >
+        $(targetID).append(`<div class="box-frame one-forth" >
                 <img class="ck-receiver sqimg clickable"  id = "${this.uid}" src="${this.preview}"
                     alt="${this.name}">
-        </div>`
-        );
+        </div>`);
     }
-
     display() {
         // reset html
         document.querySelector(".individual").innerHTML = "";
-
         // Clear up href
         let hrefStructure = [];
         this.rehref.forEach(anObj => hrefStructure.push(`<a class = "obl" href = "${anObj.href}">${anObj.caption}</a>`));
         hrefStructure.join(", ");
-
         // Append content into individual sector
         $(".individual").append(`
         <h1 class = "mg-bot-xs">${this.name}</h1>
@@ -125,50 +94,45 @@ class Projectent {
                 <h3 class="ul">Skills</h3>
             </div>
         </div>`);
-
         this.skill.forEach(x => {
             $("#pj-skills").append(`<span>#${x}</span>`);
         });
     }
 }
-
-const introduction = "I'm a front-end developer, with digital marketing and interdisciplinary translation background."
-const introArr = introduction.split('');
+const introduction = "I'm a front-end developer, with digital marketing and interdisciplinary translation background.";
+const introArr = introduction.split("");
 let count = 0;
-
-function dashOut (arr){
-    if (count<arr.length) {
+function dashOut(arr) {
+    if (count < arr.length) {
         document.querySelector("#self-introduction").textContent += arr[count];
         count++;
-        setTimeout(function(){dashOut(arr)},interval(arr[count]));
+        setTimeout(function () {
+            dashOut(arr);
+        }, interval(arr[count]));
     }
     else {
         $("#self-introduction").html(`I'm a <span class = "key-message">front-end developer</span>, with <span class = "key-message">digital marketing</span> and <span class = "key-message">interdisciplinary translation</span> background.`);
     }
-    
 }
-
 function interval(letter) {
-    console.log(letter);
     if (letter == ";" || letter == "." || letter == ",") {
         return Math.floor(Math.random() * 500 + 500);
-    } else {
+    }
+    else {
         return Math.floor(Math.random() * 130 + 5);
     }
 }
-
-
-
 // ## 2. Functions declarations
 // ### 2.1 Ajax calling for website info, returning contents for page1 and page2
 // Load at start
 let http = new XMLHttpRequest();
-http.open('GET', 'https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json');
+http.open("GET", "https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json");
 // http.setRequestHeader("Date","Fri, Dec 31 1999 23:59:59 GMT");
 http.onreadystatechange = function () {
     if (http.readyState != XMLHttpRequest.DONE) {
         return;
-    } else if (http.status == 200) {
+    }
+    else if (http.status == 200) {
         let respTxt = JSON.parse(http.responseText);
         let updates = respTxt.updates;
         let projects = respTxt.getShitDone;
@@ -177,31 +141,27 @@ http.onreadystatechange = function () {
             let nuEntity = new Updates(ele);
             nuEntity.crtNewEntity();
         });
-
         projects.forEach(function (boxes) {
             let newBox = new Projectent(boxes);
             newBox.fetch();
         });
-
-    } else {
+    }
+    else {
         console.log(`error occured: ${http.status}`);
     }
-}
+};
 http.send();
-
-
 // ### 2.2 id converter for the project (page3) page
 function asyncRetrive(checker) {
     $.get("https://raw.githubusercontent.com/ivanoung/web-design-ivan-homepage/master/v2/content.json")
-        .done((ele) => {
-            let testres = new Projectent(...(JSON.parse(ele).getShitDone.filter(arrUnit=>arrUnit["uniqueID"] == checker)));
-            testres.display();
-        })
-        .fail((ele) => {
-            console.log("oh shit");
-        });
+        .done(ele => {
+        let testres = new Projectent(...JSON.parse(ele).getShitDone.filter(arrUnit => arrUnit["uniqueID"] == checker));
+        testres.display();
+    })
+        .fail(ele => {
+        console.log("oh shit");
+    });
 }
-
 // ## 3. Interaction declarations
 // ### 3.1 Page on load
 $(document).ready(() => {
@@ -210,52 +170,44 @@ $(document).ready(() => {
     $("body").attr("id", "theme1");
     $("#in").hide();
     dashOut(introArr);
-})
-
+});
 // ### 3.3 Return home click
-$("#rthome").click((event) => {
+$("#rthome").click(event => {
     event.preventDefault();
     $(".page1").show();
     $(".page2, .page3").hide();
     $("body").attr("id", "theme1");
-})
-
+});
 // ### 3.4 Project collection page (page2) showing
-$("#epv").on("click",(event) => {
+$("#epv").on("click", event => {
     event.preventDefault();
     $(".page2").show();
     $(".page1, .page3").hide();
     $("body").attr("id", "theme2");
-})
-
+});
 // ### 3.5 Individual project (page3) showing
 // Bloody fracking hell use on becuase of dynamic content load on click
-$('body').on('click', ".ck-receiver", function(event){
+$("body").on("click", ".ck-receiver", function (event) {
     event.preventDefault();
-    $("body, html").animate({scrollTop:0},1000);
+    $("body, html").animate({ scrollTop: 0 }, 1000);
     $(".page1, .page2").hide();
     $(".page3").show();
     $("body").attr("id", "theme3");
     let checker = $(this).attr("id");
-    asyncRetrive(checker);   
-})
-
+    asyncRetrive(checker);
+});
 // ### 3.6 Swaping mailbox emojiiiiiiiiiiiiiiiiiii
-$("body").on("mouseenter","#mailing",()=> $("#out, #in").toggle());
-$("body").on("mouseleave","#mailing",()=> $("#out, #in").toggle());
-
+$("body").on("mouseenter", "#mailing", () => $("#out, #in").toggle());
+$("body").on("mouseleave", "#mailing", () => $("#out, #in").toggle());
 // ### 3.7 Send me an email with custom fields
 $("#mailing").click(el => {
     let subject = $("#mail-subject").text();
     let name = $("#mail-name").text();
-    window.open(
-      `mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`
-    );
-  });
-  
-  // ### 3.8 Clicking first page to second page
-  $("body").on("click", ".key-message", function(event) {
+    window.open(`mailto:ivanoung@gmail.com?subject=${subject}&body=Hey this is ${name}, let's talk about ${subject} soon!!`);
+});
+// ### 3.8 Clicking first page to second page
+$("body").on("click", ".key-message", function (event) {
     $(".page2").show();
     $(".page1, .page3").hide();
     $("body").attr("id", "theme2");
-  });
+});

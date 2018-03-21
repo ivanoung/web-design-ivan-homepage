@@ -2,6 +2,29 @@
 > Personal portfolio of Ivan Oung
 [Trello To-Do list](https://trello.com/c/a2vtr4ha/24-to-do)
 
+
+## v2.4 March-19-2018
+### Added
+    - Replacing DOM after first paragraph typing effect
+    - Add clicking effect to first paragraph
+
+## v2.3 March-17-2018
+After reviewing website with Karan, few point have been pointed out, that the design is not captative enough to capture the first few seconds of visitors' attention. Also, becuase of using jQuery, ()=> have conflict with the scope of "this", where needed to changed back to function(){}.
+
+### Added
+    - Typing effect on the landing page for captative effect
+    - Adding prevent default on specific link clicks instead of global
+    - Adding favicon to website
+
+### Changed
+    - Replace swtich case with deconstruction of array (Page 2 Ajax pullout)
+    - CSS styling of text box in the first page
+    - CSS width of contact box
+
+### Removed
+    - Removed prevent default on all links
+
+
 ## v.2.2 March-13-2018
 Comparing to the last version, this is by far the most up-to-date version with responsiveness and interaction embedded. So far, the basic structure of the website is done, leaving the interaction and the optimization to be improved in the future.
 
