@@ -12,7 +12,7 @@ body {
 #theme1 {
     --main-color: #322F7C;
     --secondary-color: rgba(255, 117, 125, 1);
-    --secondary-color-shade: rgba(255, 117, 125, .8);
+    --secondary-color-shade: rgba(250, 226, 227, 0.8);
     --highlights: #f9f7ef;
     --strong-hilight: #ff2f7c;
 }
